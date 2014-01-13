@@ -1,0 +1,333 @@
+@import "mixins";
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+@font-face {
+  font-family: "gobold-light";
+  src: url(../fonts/Gobold%20Light.ttf);
+}
+
+@font-face {
+  font-family: "gobold-thin";
+  src: url(../fonts/Gobold%20Thin.ttf);
+}
+
+@font-face {
+  font-family: "steelfish";
+  src: url(../fonts/steelfish%20rg.ttf);
+}
+
+
+html, body {
+  width: 100%;
+  // height: 100%;
+  background-color: lightgrey;
+  margin: 0px;
+  font: "Lucida Grande", Tahoma, sans-serif;
+}
+
+body {
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+// TOPBAR rules ////////////////////////////////////////////////////////////
+.og-topbar {
+  position: fixed;
+  top: 0;
+  // left: 0; right: 0; // this one makes the bar stretch from side to side
+  width: 100%;
+  height: 3em;
+  box-sizing: border-box;
+  -moz-border-sizing: border-box;
+  background-color: #414141;
+  z-index: 10;
+  padding: 10px;
+}
+
+.og-footer-title,
+.og-topbar-title {
+  position: absolute;
+  top: 0;
+  left: 0; right: 0;
+  display: block;
+  // width: 100%;
+  margin-bottom: 0;
+
+  font-size: 20px;
+  font-family: gobold-light;
+  font-weight: bold;
+  // line-height: 44px;
+  text-align: center;
+  white-space: nowrap;
+  color: lightgrey;
+  // margin: 10px auto;
+}
+
+.og-topbar-back {
+  position: relative;
+  display: inline-block;
+  z-index: 10; // otherwise it'll be overlaped by header
+
+  padding: 4px 12px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  line-height: 18px;
+  font-weight: bold;
+
+  // color: #333;
+  text-align: center;
+  // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  vertical-align: top;
+  // cursor: pointer;
+
+  background-image: url(../img/chevron-left-light.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// EO TOPBAR rules /////////////////////////////////////////////////////////
+
+.guide-title {
+  // height: 15em;
+  margin: 1.5em auto;
+  font-family: gobold-light;
+  font-size: 4em;
+  font-weight: bolder;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+}
+
+.chapter-title {
+  margin-top: 1.5em; // margin: 1.5em auto;
+  margin-bottom: 0.3em;
+  font-family: gobold-light;
+  font-size: 2em;
+  font-weight: bolder;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+}
+
+.authors {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+// LIST rules ////////////////////////////////////////////////////////////
+.mainmenu {
+  .menuprops();
+}
+
+.submenu {
+  .menuprops(white);
+}
+
+.chapter-items {
+  @media screen and (min-width: 1024px) {
+    .li-bg-image('../img/chevron-right.png', 96%, 3% auto);
+  }
+  @media (max-width: 480px) {
+    .li-bg-image('../img/chevron-right.png', 98%, 10% auto);
+  }
+
+  a {
+    .item-link(grey, darkgoldenrod);
+
+  }
+}
+
+.menuitem {
+
+  @media screen and (min-width: 1024px) {
+    .li-bg-image('../img/chevron-right.png', 96%, 3% auto);
+  }
+  @media (max-width: 480px) {
+    .li-bg-image('../img/chevron-right.png', 98%, 10% auto);
+  }
+
+  .item-link(grey, darkgoldenrod);
+  a {
+    .item-link(grey, darkgoldenrod);
+
+  }
+}
+
+.subitem {
+  @media screen and (min-width: 1024px) {
+    .li-bg-image('../img/chevron-right.png', 96%, 3% auto);
+  }
+  @media (max-width: 480px) {
+    .li-bg-image('../img/chevron-right.png', 98%, 10% auto);
+  }
+
+  a {
+    .item-link(grey, white);
+    &:hover {
+      background-color: lightgrey;
+    }
+  }
+}
+
+// collapsible styles
+
+/*
+.mainmenu a:hover {
+  background-color: saddlebrown;
+  .li-bg-image('../img/chevron-right.png', 96%, 3% auto);
+}
+*/
+
+// EO LIST rules /////////////////////////////////////////////////////////
+
+// Article styles ///////////////////////////////////////////////////////
+.article-title {
+  font-family: gobold-light;
+  font-size: 2em;
+  margin-top: 2em;
+  padding: 0 1em 0 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+article {
+  font-family: gobold-thin;
+  padding: 0.5em;
+  font-size: 0.9em;
+  p {
+    font-family: Arial;
+    // font-size: 0.8em;
+  }
+
+  ul {
+    list-style-type: none;
+    font-family: Arial;
+    padding: 0 0 1em 1.5em;
+
+    li {
+      margin-bottom: 1em;
+      &:before {
+        content: " - ";
+      }
+    }
+  }
+
+  figure {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    /*
+    background-image: url(../img/fig/3_F3.large.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    */
+
+    img {
+      width: 100%;
+    }
+    figcaption {
+      margin-top: -1em;
+      p {
+        font-size: 0.75em;
+      }
+    }
+  } // EO figure styles
+
+  .table-head {
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bold;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 0.8em;
+    tbody > tr:first-child > td {
+      font-weight: bold;
+    }
+    td {
+      padding: 0.5px;
+      border: 1px solid black;
+      text-align: center;
+
+      p {
+        margin: 0 auto;
+      }
+    }
+
+    /*
+    td.td1 {width: 113.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 94.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td3 {width: 96.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td4 {width: 95.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td5 {width: 99.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td6 {width: 84.0px; background-color: #ffffff; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td7 {width: 380.0px; background-color: #ffffff; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td8 {width: 282.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td9 {width: 185.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td10 {width: 94.0px; background-color: #ffffff; padding: 1.0px 1.0px 1.0px 1.0px}
+    */
+  }
+}
+// EO article styles
+
+.footer {
+  color: whitesmoke;
+  background-color: #414141;
+  // height: 4em;
+  // width: 100%;
+  // padding-left: 1em;
+
+  font-family: gobold-light;
+  position:fixed;
+  left:0px; right: 0px;
+  padding: 10px;
+  bottom:0px;
+  height:30px;
+}
+
+div#banner {
+  margin-top: 1em;
+  text-align: center;
+}
+
+
+/* for myaccordion plugin
+.accordion {
+  margin:0; padding:0 10px;
+  li {
+    list-style-type: none;
+  }
+
+  p {
+    margin:.5em 0 1em
+  }
+
+  .h {
+    padding-top: .3em;
+  }
+  .outer {
+    border:1px solid #dadada;
+    border-width:0 1px 1px; background: #fff
+  }
+
+  .inner {
+    margin-bottom:0;
+    padding:.5em 20px 0;
+    overflow:hidden;
+
+    .inner {
+      padding-bottom: 0;
+    }
+  }
+
+}
+
+*/

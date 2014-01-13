@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <!--viewport goodness http://enva.to/A79s3G-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/collapsible.css">
+
+  <style type="text/css">
+    .ul_main {
+      list-style-type: none;
+    }
+
+  </style>
+  <title>Oncoguides</title>
+  <!--
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" >
+  -->
+</head>
+
+<body>
+<header class="og-topbar">
+  <a href="#" class="og-topbar-back"></a>
+  <h1 class="og-topbar-title">Guía GIST</h1>
+</header>
+
+<div class="guide-title">GIST</div>
+
+<div id="accordiondiv">
+  <ul class="mainmenu collapse-container" id="menu-container">
+
+    <li class="menuitem">Introducción</li>
+      <ul style="list-style-type: none">
+        <li class="subitem"><a href="#article?intro">Introducción</a></li>
+      </ul>
+
+
+    <li class="menuitem">Anatomía patológica de los tumores del estroma
+      gastro-intestinal</li>
+      <ul style="list-style-type: none">
+        <li class="subitem"><a href="#article?loc">Localización</a></li>
+        <li class="subitem"><a href="#article?322">3.2.2. Características macroscopicas</a></li>
+        <li class="subitem"><a href="#article?323">3.2.3. Características microscopicas</a></li>
+      </ul>
+
+
+    <li class="menuitem">Clasificacion pronostica y sistemas de establecimiento del riesgo en GIST</li>
+      <ul style="list-style-type: none;">
+        <li class="subitem"><a href="#article?331">Clasificacion de Consenso Instituto Nacional de Salud (NIH)/Clasificacion de Fletcher</a></li>
+        <li class="subitem"><a href="#article?332">3.3.2. Criterios de malignidad en GIST del Instituto de Patologia de las Fuerzas Armadas (AFIP)/Clasificacion de Miettinen</a></li>
+        <li class="subitem"><a href="#article?333">3.3.3. Normograma para la evaluacion del riesgo en GIST 23</a></li>
+      </ul>
+
+  </ul>
+
+</div>
+
+
+<footer class="footer">
+  <h1 class="og-footer-title">Sponsors</h1>
+</footer>
+
+<script src="/angular126/angular.js"></script>
+<script src="js/vendor/jquery-1.10.2.js"></script>
+<script src="js/vendor/jquery.collapsible.js"></script>
+<script type="text/javascript">
+  /*
+   $('#menu-container .collapsible').hide();
+   $('li.menuitem > a').on('click', function () {
+   var nxt = $(this).parent('li').next('.collapsible');
+
+   nxt.is(':hidden') ? ($('#menu-container > .collapsible').slideUp(), nxt.slideDown()) :
+   nxt.slideUp();
+   });
+   *
+  $(function () {
+    var divAccord = $("#accordiondiv");
+    $("#accordiondiv").accordion();
+
+    $("#accordiondivbis").accordion();
+  });
+  */
+
+  $('#menu-container').collapsible('accordion-open', {
+    contentOpen: 1,
+    animate: false
+  });
+  /*
+  var $ul_li_ul = $('ul li ul');
+  var $ul_li = $('ul li[class=menuitem]');
+
+  $ul_li_ul.hide();
+  $ul_li.each(function (index) {
+    $(this).click(function () {
+      console.log("$ul_li.onclick: "+index);
+      $ul_li_ul.hide();
+      $(this).children().first().show();
+    });
+
+  })
+  */
+</script>
+
+</body>
+</html>

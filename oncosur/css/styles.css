@@ -1,0 +1,367 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+/*
+  @color: text font color
+  @bgcolor: bg color by default
+*/
+@font-face {
+  font-family: "gobold-light";
+  src: url(../fonts/Gobold%20Light.ttf);
+}
+@font-face {
+  font-family: "gobold-thin";
+  src: url(../fonts/Gobold%20Thin.ttf);
+}
+@font-face {
+  font-family: "steelfish";
+  src: url(../fonts/steelfish%20rg.ttf);
+}
+html,
+body {
+  width: 100%;
+  background-color: lightgrey;
+  margin: 0px;
+  font: "Lucida Grande", Tahoma, sans-serif;
+}
+body {
+  height: 100%;
+  padding-bottom: 50px;
+}
+.og-topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3em;
+  box-sizing: border-box;
+  -moz-border-sizing: border-box;
+  background-color: #414141;
+  z-index: 10;
+  padding: 10px;
+}
+.og-footer-title,
+.og-topbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-family: gobold-light;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  color: lightgrey;
+}
+.og-topbar-back {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+  padding: 4px 12px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+  background-image: url(../img/chevron-left-light.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.guide-title {
+  margin: 1.5em auto;
+  font-family: gobold-light;
+  font-size: 4em;
+  font-weight: bolder;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+}
+.chapter-title {
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+  font-family: gobold-light;
+  font-size: 2em;
+  font-weight: bolder;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+}
+.authors {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+.mainmenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  background-color: #daa520;
+  font-family: gobold-light;
+  font-size: 1.1em;
+}
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: gobold-light;
+  font-size: 1.1em;
+}
+@media screen and (min-width: 1024px) {
+  .chapter-items {
+    background-image: url('../img/chevron-right.png');
+    background-repeat: no-repeat;
+    background-position: 96%;
+    background-size: 3% auto;
+  }
+}
+@media (max-width: 480px) {
+  .chapter-items {
+    background-image: url('../img/chevron-right.png');
+    background-repeat: no-repeat;
+    background-position: 98%;
+    background-size: 10% auto;
+  }
+}
+.chapter-items a {
+  display: block;
+  color: #808080;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em 2em 1em 0.5em;
+  line-height: 1;
+  border-bottom: 1px solid #808080;
+  border-left: 15px solid #808080;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /*
+  &:hover {
+    background-color: saddlebrown;
+  }
+  */
+}
+.menuitem {
+  display: block;
+  color: #808080;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em 2em 1em 0.5em;
+  line-height: 1;
+  border-bottom: 1px solid #808080;
+  border-left: 15px solid #808080;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /*
+  &:hover {
+    background-color: saddlebrown;
+  }
+  */
+}
+@media screen and (min-width: 1024px) {
+  .menuitem {
+    background-image: url('../img/chevron-right.png');
+    background-repeat: no-repeat;
+    background-position: 96%;
+    background-size: 3% auto;
+  }
+}
+@media (max-width: 480px) {
+  .menuitem {
+    background-image: url('../img/chevron-right.png');
+    background-repeat: no-repeat;
+    background-position: 98%;
+    background-size: 10% auto;
+  }
+}
+.menuitem a {
+  display: block;
+  color: #808080;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em 2em 1em 0.5em;
+  line-height: 1;
+  border-bottom: 1px solid #808080;
+  border-left: 15px solid #808080;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /*
+  &:hover {
+    background-color: saddlebrown;
+  }
+  */
+}
+@media screen and (min-width: 1024px) {
+  .subitem {
+    background-image: url('../img/chevron-right.png');
+    background-repeat: no-repeat;
+    background-position: 96%;
+    background-size: 3% auto;
+  }
+}
+@media (max-width: 480px) {
+  .subitem {
+    background-image: url('../img/chevron-right.png');
+    background-repeat: no-repeat;
+    background-position: 98%;
+    background-size: 10% auto;
+  }
+}
+.subitem a {
+  display: block;
+  color: #808080;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em 2em 1em 0.5em;
+  line-height: 1;
+  border-bottom: 1px solid #808080;
+  border-left: 15px solid #808080;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /*
+  &:hover {
+    background-color: saddlebrown;
+  }
+  */
+}
+.subitem a:hover {
+  background-color: lightgrey;
+}
+/*
+.mainmenu a:hover {
+  background-color: saddlebrown;
+  .li-bg-image('../img/chevron-right.png', 96%, 3% auto);
+}
+*/
+.article-title {
+  font-family: gobold-light;
+  font-size: 2em;
+  margin-top: 2em;
+  padding: 0 1em 0 1em;
+  text-align: center;
+  font-weight: bold;
+}
+article {
+  font-family: gobold-thin;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+article p {
+  font-family: Arial;
+}
+article ul {
+  list-style-type: none;
+  font-family: Arial;
+  padding: 0 0 1em 1.5em;
+}
+article ul li {
+  margin-bottom: 1em;
+}
+article ul li:before {
+  content: " - ";
+}
+article figure {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  /*
+    background-image: url(../img/fig/3_F3.large.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    */
+}
+article figure img {
+  width: 100%;
+}
+article figure figcaption {
+  margin-top: -1em;
+}
+article figure figcaption p {
+  font-size: 0.75em;
+}
+article .table-head {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+article table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-size: 0.8em;
+  /*
+    td.td1 {width: 113.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 94.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td3 {width: 96.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td4 {width: 95.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td5 {width: 99.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td6 {width: 84.0px; background-color: #ffffff; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td7 {width: 380.0px; background-color: #ffffff; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td8 {width: 282.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td9 {width: 185.0px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td10 {width: 94.0px; background-color: #ffffff; padding: 1.0px 1.0px 1.0px 1.0px}
+    */
+}
+article table tbody > tr:first-child > td {
+  font-weight: bold;
+}
+article table td {
+  padding: 0.5px;
+  border: 1px solid black;
+  text-align: center;
+}
+article table td p {
+  margin: 0 auto;
+}
+.footer {
+  color: whitesmoke;
+  background-color: #414141;
+  font-family: gobold-light;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  padding: 10px;
+  bottom: 0px;
+  height: 30px;
+}
+div#banner {
+  margin-top: 1em;
+  text-align: center;
+}
+/* for myaccordion plugin
+.accordion {
+  margin:0; padding:0 10px;
+  li {
+    list-style-type: none;
+  }
+
+  p {
+    margin:.5em 0 1em
+  }
+
+  .h {
+    padding-top: .3em;
+  }
+  .outer {
+    border:1px solid #dadada;
+    border-width:0 1px 1px; background: #fff
+  }
+
+  .inner {
+    margin-bottom:0;
+    padding:.5em 20px 0;
+    overflow:hidden;
+
+    .inner {
+      padding-bottom: 0;
+    }
+  }
+
+}
+
+*/

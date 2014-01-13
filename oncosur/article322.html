@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <!--viewport goodness http://enva.to/A79s3G-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/collapsible.css">
+
+  <title>Oncoguides</title>
+  <!--
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" >
+  -->
+</head>
+
+<body>
+<header class="og-topbar">
+  <div onclick="history.back();" class="og-topbar-back"></div>
+  <h1 class="og-topbar-title">Guía GIST</h1>
+</header>
+
+<div class="article-title">Características macroscópicas</div>
+<article>
+  <p class="article-p">El tamaño es altamente variable, puede oscilar entre 0,8 y 38 cm. Son macroscópicamente bien delimitados y su disposición puede ser submu- cosa, intramural o aparecer como nódulos serosos.</p>
+  <p>El crecimiento suele ser exofítico, protruyendo y en ocasiones ulce- rando la mucosa, también pueden crecer hacia la serosa, en ocasiones mostrando un gran componente extra parietal, dificultando en estos casos la identificación del origen digestivo.</p>
+  <p>La superficie tumoral, al corte, presenta un aspecto arremolinado con contorno lobulado. Pueden aparecer áreas de degeneración quística, hemorragia y necrosis, más comunes en tumores de alto grado de malig- nidad, sin que estas últimas características impliquen de forma directa mayor agresividad tumoral (5).</p>
+</article>
+
+<footer class="footer">
+  <h1 class="og-footer-title">Sponsors</h1>
+</footer>
+
+<script src="/angular126/angular.js"></script>
+<script src="js/vendor/jquery-1.10.2.js"></script>
+<script src="js/vendor/jquery.collapsible.js"></script>
+<script type="text/javascript">
+  /*
+   $('#menu-container .collapsible').hide();
+   $('li.menuitem > a').on('click', function () {
+   var nxt = $(this).parent('li').next('.collapsible');
+
+   nxt.is(':hidden') ? ($('#menu-container > .collapsible').slideUp(), nxt.slideDown()) :
+   nxt.slideUp();
+   });
+   */
+  $('#menu-container').collapsible('accordion', {
+    // contentOpen: 0,
+    animate: true
+  });
+</script>
+
+</body>
+</html>

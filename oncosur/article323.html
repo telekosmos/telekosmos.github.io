@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <!--viewport goodness http://enva.to/A79s3G-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/collapsible.css">
+
+  <title>Oncoguides</title>
+  <!--
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" >
+  -->
+</head>
+
+<body>
+<header class="og-topbar">
+  <div onclick="history.back();" class="og-topbar-back"></div>
+  <h1 class="og-topbar-title">Guía GIST</h1>
+</header>
+
+<div class="article-title">Características microscópicas</div>
+<article>
+  <p class="article-p">Microscópicamente, se distinguen fundamentalmente dos morfologías celulares y tres categorías puramente morfológicas:</p>
+  <ul>
+    <li>GIST fusocelulares, de aspecto sincitial o fibrilar, formados por fascículos entrelazados de células de hábito fusiforme de núcleo ovoideo y citoplasma pálido ligeramente eosinófilo, con presencia de características vacuolas paranucleares.</li>
+    <li>Los GIST epitelioides, por su parte, muestran un aspecto más difuso, están constituidos por nidos de células de núcleo redondeado, citoplasma amplio, eosinófilo, vacuolado y contorno poligonal, que pueden recordar a las células de un carcinoma.</li>
+    <li>La tercera variante, la mixta, está constituida por ambos tipos celulares, que alternan de forma brusca u ocasionalmente con células de características intermedias a las anteriormente descritas (5) (figura 1).</li>
+    <li>Otras características microscópicas que podemos encontrar en los GIST son la presencia de un estroma hialino, rico en fibras colágenas o con áreas mixoides. Se ha descrito en un notable número de casos la presencia de fibras en madeja (fibras esquenoides) así como la formación de empalizadas celulares similares a las observadas en los schwanomas.</li>
+  </ul>
+
+  <figure>
+    <img src="img/fig/5_F5.med.jpg">
+    <figcaption>
+      <p>Figura 1. A: Aspecto microscópico de GIST con patrón fusocelular. B: Imagen microscópica de GIST de patrón epitelioide, con células de contorno poligonal y núcleo redondeado. C: Inmunotición con CD117. D: Imagen macroscópica de GIST submucoso con extensas áreas de hemorragia y necrosis.</p>
+    </figcaption>
+  </figure>
+
+  <p class="article-p"></p>
+
+  <figure>
+    <img src="img/fig/3_F3.large.jpg">
+    <figcaption>
+      <p>Ground dweller: <i>Nicodamus bicolor</i> builds silk snares.</p>
+      <p>A small hairy spider.
+        <small>J. A. L. Cooke/OSF</small></p>
+    </figcaption>
+  </figure>
+
+</article>
+
+
+<footer class="footer">
+  <h1 class="og-footer-title">Sponsors</h1>
+</footer>
+
+<script src="/angular126/angular.js"></script>
+<script src="js/vendor/jquery-1.10.2.js"></script>
+<script src="js/vendor/jquery.collapsible.js"></script>
+<script type="text/javascript">
+  /*
+   $('#menu-container .collapsible').hide();
+   $('li.menuitem > a').on('click', function () {
+   var nxt = $(this).parent('li').next('.collapsible');
+
+   nxt.is(':hidden') ? ($('#menu-container > .collapsible').slideUp(), nxt.slideDown()) :
+   nxt.slideUp();
+   });
+   */
+  $('#menu-container').collapsible('accordion', {
+    // contentOpen: 0,
+    animate: true
+  });
+</script>
+
+</body>
+</html>

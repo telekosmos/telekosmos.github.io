@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <!--viewport goodness http://enva.to/A79s3G-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/collapsible.css">
+
+  <title>Oncoguides</title>
+  <!--
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" >
+  -->
+</head>
+
+<body>
+<header class="og-topbar">
+  <div onclick="history.back();" class="og-topbar-back"></div>
+  <h1 class="og-topbar-title">Guía GIST</h1>
+</header>
+
+<div class="article-title">Criterios de malignidad en GIST del Instituto de Patología de las Fuerzas Armadas (AFIP)/Clasificación de Miettinen
+</div>
+<article>
+  <p>Al igual que su predecesor, este sistema de clasificación se estableció basándose en el seguimiento y estudio de una amplia serie de casos de GIST de diferentes localizaciones (9), a partir de las que se establecen 8 subgrupos pronósticos, basándose en el tamaño tumoral, en el número de mitosis contadas en 50 campos de gran aumento y a diferencia de la clasificación del NIH, en la localización anatómica del tumor. Con esto, Miettinen y cols. separan 5 grupos de riesgo diferentes, estableciendo como novedad una categoría de GIST benignos o carentes de riesgo de malignización (tabla II).</p>
+  <p>La principal desventaja de esta clasificación, aunque presenta mejor correlación con la evolución clínica que la de la NIH (que tiende a sobre- gradar los GIST gástricos y a infragradar el resto), radica, en opinión de clínicos y patólogos, en su complejidad y en el elevado número de sub- categorías que presenta.</p>
+  <table cellspacing="0" cellpadding="0" class="t1">
+    <tbody>
+    <tr>
+      <td class="td1">
+        <p class="p1">Tamaño (cm)</p>
+      </td>
+      <td class="td2">
+        <p class="p1">Mitosis en 50 CGA</p>
+      </td>
+      <td class="td3">
+        <p class="p1">Estómago</p>
+      </td>
+      <td class="td4">
+        <p class="p1">Duodeno</p>
+      </td>
+      <td class="td5">
+        <p class="p1">Yeyuno/ Ileón</p>
+      </td>
+      <td class="td6">
+        <p class="p1">Recto</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p2">≤<span class="s1">2</span></p>
+      </td>
+      <td rowspan="4" class="td2">
+        <p class="p2">≤<span class="s1">5</span></p>
+      </td>
+      <td colspan="4" class="td7">
+        <p class="p1">Benigno</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p1">&gt;2 <span class="s2">≤</span>5</p>
+      </td>
+      <td class="td3">
+        <p class="p1">Muy bajo</p>
+      </td>
+      <td colspan="3" class="td8">
+        <p class="p1">Bajo</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p1">&gt;5 <span class="s2">≤</span>10</p>
+      </td>
+      <td class="td3">
+        <p class="p1">Bajo</p>
+      </td>
+      <td class="td4">
+        <p class="p1">Intermedio</p>
+      </td>
+      <td colspan="2" class="td9">
+        <p class="p1">Sin datos</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p1">&gt;10</p>
+      </td>
+      <td class="td3">
+        <p class="p1">Intermedio</p>
+      </td>
+      <td colspan="3" class="td8">
+        <p class="p1">Alto</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p2">≤<span class="s1">2</span></p>
+      </td>
+      <td rowspan="4" class="td10">
+        <p class="p1">&gt;5</p>
+      </td>
+      <td class="td3">
+        <p class="p1">Benigno</p>
+      </td>
+      <td class="td4">
+        <p class="p1">Alto</p>
+      </td>
+      <td class="td5">
+        <p class="p1">Sin datos</p>
+      </td>
+      <td class="td6">
+        <p class="p1">Alto</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p1">&gt;2 <span class="s2">≤</span>5</p>
+      </td>
+      <td class="td3">
+        <p class="p1">Intermedio</p>
+      </td>
+      <td rowspan="3" colspan="3" class="td8">
+        <p class="p1">Alto</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p1">&gt;5 <span class="s2">≤</span>10</p>
+      </td>
+      <td rowspan="2" class="td3">
+        <p class="p1">Alto</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">
+        <p class="p1">&gt;10</p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</article>
+
+<footer class="footer">
+  <h1 class="og-footer-title">Sponsors</h1>
+</footer>
+
+<script src="/angular126/angular.js"></script>
+<script src="js/vendor/jquery-1.10.2.js"></script>
+<script src="js/vendor/jquery.collapsible.js"></script>
+<script type="text/javascript">
+  /*
+   $('#menu-container .collapsible').hide();
+   $('li.menuitem > a').on('click', function () {
+   var nxt = $(this).parent('li').next('.collapsible');
+
+   nxt.is(':hidden') ? ($('#menu-container > .collapsible').slideUp(), nxt.slideDown()) :
+   nxt.slideUp();
+   });
+   */
+  $('#menu-container').collapsible('accordion', {
+    // contentOpen: 0,
+    animate: true
+  });
+</script>
+
+</body>
+</html>

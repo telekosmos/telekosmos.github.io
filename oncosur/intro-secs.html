@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <!--viewport goodness http://enva.to/A79s3G-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/collapsible.css">
+
+  <title>Oncoguides</title>
+  <!--
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" >
+  -->
+</head>
+
+<body>
+<header class="og-topbar">
+  <div onclick="history.back();" class="og-topbar-back"></div>
+  <h1 class="og-topbar-title">Guía GIST</h1>
+</header>
+
+<div class="chapter-title">Introducción</div>
+<div class="authors">Ignacio Juez Martel y José Antonio López Martín
+</div>
+
+<!--  <div id="accordiondiv"> -->
+<ul class="mainmenu collapse-container" id="menu-container">
+
+  <li class="menuitem">Introducción</li>
+  <ul class="submenu" style="list-style-type: none">
+    <li class="subitem"><a href="article0.html">Introducción</a></li>
+  </ul>
+
+</ul>
+
+<!-- </div> -->
+
+
+<footer class="footer">
+  <h1 class="og-footer-title">Sponsors</h1>
+</footer>
+
+<script src="/angular126/angular.js"></script>
+<script src="js/vendor/jquery-1.10.2.js"></script>
+<script src="js/vendor/jquery.collapsible.js"></script>
+<script type="text/javascript">
+  /*
+   $('#menu-container .collapsible').hide();
+   $('li.menuitem > a').on('click', function () {
+   var nxt = $(this).parent('li').next('.collapsible');
+
+   nxt.is(':hidden') ? ($('#menu-container > .collapsible').slideUp(), nxt.slideDown()) :
+   nxt.slideUp();
+   });
+   */
+  $('#menu-container').collapsible('accordion', {
+    // contentOpen: 0,
+    animate: true
+  });
+</script>
+
+</body>
+</html>
