@@ -18,7 +18,7 @@
 html,
 body {
   width: 100%;
-  background-color: lightgrey;
+  background-color: #F8DC96;
   margin: 0px;
   font: "Lucida Grande", Tahoma, sans-serif;
 }
@@ -76,6 +76,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   display: block;
+  color: #573F05;
 }
 .chapter-title {
   margin-top: 1.5em;
@@ -86,6 +87,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   display: block;
+  color: #573F05;
 }
 .authors {
   font-family: Arial;
@@ -130,13 +132,13 @@ body {
 }
 .chapter-items a {
   display: block;
-  color: #808080;
+  color: #271c02;
   text-decoration: none;
   font-weight: bold;
   padding: 1em 2em 1em 0.5em;
   line-height: 1;
-  border-bottom: 1px solid #808080;
-  border-left: 15px solid #808080;
+  border-bottom: 1px solid #271c02;
+  border-left: 15px solid #271c02;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   /*
@@ -147,13 +149,13 @@ body {
 }
 .menuitem {
   display: block;
-  color: #808080;
+  color: #271c02;
   text-decoration: none;
   font-weight: bold;
   padding: 1em 2em 1em 0.5em;
   line-height: 1;
-  border-bottom: 1px solid #808080;
-  border-left: 15px solid #808080;
+  border-bottom: 1px solid #271c02;
+  border-left: 15px solid #271c02;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   /*
@@ -180,13 +182,13 @@ body {
 }
 .menuitem a {
   display: block;
-  color: #808080;
+  color: #271c02;
   text-decoration: none;
   font-weight: bold;
   padding: 1em 2em 1em 0.5em;
   line-height: 1;
-  border-bottom: 1px solid #808080;
-  border-left: 15px solid #808080;
+  border-bottom: 1px solid #271c02;
+  border-left: 15px solid #271c02;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   /*
@@ -213,13 +215,13 @@ body {
 }
 .subitem a {
   display: block;
-  color: #808080;
+  color: #271c02;
   text-decoration: none;
   font-weight: bold;
   padding: 1em 2em 1em 0.5em;
   line-height: 1;
-  border-bottom: 1px solid #808080;
-  border-left: 15px solid #808080;
+  border-bottom: 1px solid #271c02;
+  border-left: 15px solid #271c02;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   /*

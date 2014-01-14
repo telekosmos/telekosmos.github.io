@@ -20,7 +20,7 @@
 html, body {
   width: 100%;
   // height: 100%;
-  background-color: lightgrey;
+  background-color: #F8DC96; // lightgrey;
   margin: 0px;
   font: "Lucida Grande", Tahoma, sans-serif;
 }
@@ -97,6 +97,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   display: block;
+  color: #573F05;
 }
 
 .chapter-title {
@@ -108,6 +109,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   display: block;
+  color: #573F05;
 }
 
 .authors {
@@ -136,8 +138,8 @@ body {
   }
 
   a {
-    .item-link(grey, darkgoldenrod);
-
+    //.item-link(grey);
+    .item-link(#271C02);
   }
 }
 
@@ -150,10 +152,10 @@ body {
     .li-bg-image('../img/chevron-right.png', 98%, 10% auto);
   }
 
-  .item-link(grey, darkgoldenrod);
+  .item-link(#271C02);
   a {
-    .item-link(grey, darkgoldenrod);
-
+    // .item-link(grey);
+    .item-link(#271C02);
   }
 }
 
@@ -166,7 +168,8 @@ body {
   }
 
   a {
-    .item-link(grey, white);
+    // .item-link(grey, white);
+    .item-link(#271C02);
     &:hover {
       background-color: lightgrey;
     }
