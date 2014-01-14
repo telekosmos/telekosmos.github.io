@@ -50,7 +50,7 @@ body {
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
-  color: lightgrey;
+  color: whitesmoke;
 }
 .og-topbar-back {
   position: relative;
@@ -110,7 +110,7 @@ body {
   padding: 0;
   list-style-type: none;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #f8dc96;
   font-family: gobold-light;
   font-size: 1.1em;
 }
