@@ -32,19 +32,29 @@
   <section class="menu-section">Tratamiento de los tumores</section>
   -->
   <ul class="mainmenu">
-    <li class="chapter-items"><a href="intro-secs.html">Introducción</a></li>
-    <li class="chapter-items"><a href="">Biología molecular</a></li>
-    <li class="chapter-items"><a href="diag-secs.html">Diagnóstico anatomopatológico y clasificación pronóstica de los GIST</a></li>
-    <li class="chapter-items"><a href="">Técnicas de imagen</a></li>
-    <li class="chapter-items"><a href="">Tratamiento de los tumores</a></li>
-    <li class="chapter-items"><a href="">Tratamiento de los pacientes con GIST localmente avanzado</a></li>
+    <li class="chapter-items" data-doc="intro-secs.html">Introducción</li>
+    <li class="chapter-items">Biología molecular</li>
+    <li class="chapter-items" data-doc="diag-secs.html">Diagnóstico anatomopatológico y clasificación pronóstica de los GIST</a></li>
+    <li class="chapter-items">Técnicas de imagen</li>
+    <li class="chapter-items">Tratamiento de los tumores</li>
+    <li class="chapter-items">Tratamiento de los pacientes con GIST localmente avanzado</li>
   </ul>
 
   <footer class="footer">
     <h1 class="og-footer-title">Sponsors</h1>
   </footer>
 
-  <script src="/angular126/angular.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery-1.10.2.js"></script>
+  <script type="text/javascript">
+
+    // implement links | change view
+    $('li[data-doc]').click (function () {
+      var newView = $(this).attr('data-doc');
+      window.location.href = newView;
+    });
+
+  </script>
+
 
 </body>
 </html>

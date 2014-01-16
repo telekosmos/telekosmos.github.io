@@ -120,6 +120,19 @@ body {
   -o-transition: max-height 1s;
   display: block;
 }
+.chapter-items {
+  color: #271c02;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.2em;
+  padding-left: 1em;
+  padding-right: 2em;
+  border-bottom: 1px solid #271c02;
+  border-left: 15px solid #271c02;
+  border-top: 1px solid #271c02;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
 @media screen and (min-width: 1024px) {
   .chapter-items {
     background-image: url('../img/chevron-right.png');
@@ -135,16 +148,6 @@ body {
     background-position: 98%;
     background-size: 10% auto;
   }
-}
-.chapter-items a {
-  color: #271c02;
-  text-decoration: none;
-  font-weight: bold;
-  line-height: 1.2em;
-  padding-left: 1em;
-  padding-right: 2em;
-  border-bottom: 1px solid #271c02;
-  border-left: 15px solid #271c02;
 }
 .menuitem {
   color: #271c02;
