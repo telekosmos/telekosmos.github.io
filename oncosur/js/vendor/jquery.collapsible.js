@@ -60,6 +60,7 @@
               $($thisEven).children().removeClass(settings.arrowDclass).addClass(settings.arrowRclass);
               if (settings.animate) {
                 $($thisOdd).slideUp(settings.accordionUpSpeed).removeClass(accord);
+                // $($thisOdd).animUp(settings.accordionUpSpeed).removeClass(accord);
                 // $(this).next().slideDown(settings.accordionDownSpeed).addClass(accord);
                 $(this).next().slideDown(settings.accordionDownSpeed);
               }

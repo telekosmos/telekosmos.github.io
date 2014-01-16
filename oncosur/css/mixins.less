@@ -11,30 +11,27 @@
   @bgcolor: bg color by default
 */
 .item-link (@color) {
-  display: block;  // to increase clickable area as a’s default to inline
+  // display: block;  // to increase clickable area as a’s default to inline
   color: @color;
   text-decoration: none;
   font-weight: bold;
-  padding: 1em 2em 1em 0.5em;
-  line-height: 1;
+  // padding: 1em 2em 1em 0.5em;
+  line-height: 1.2em;
+
+  padding-left: 1em;
+  padding-right: 2em;
 
   border-bottom: 1px solid @color;
   border-left: 15px solid @color;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  /*
-  &:hover {
-    background-color: saddlebrown;
-  }
-  */
 }
 
 
 .menuprops (@bgcolor: goldenrod) {
-  margin: 0;
-  padding: 0;
+  overflow: hidden;
+  // margin: 0;
+  padding-left: 0;
   list-style-type: none;
-  width: 100%;
+  // width: 100%;
   background-color: @bgcolor;
 
   font-family: gobold-light;

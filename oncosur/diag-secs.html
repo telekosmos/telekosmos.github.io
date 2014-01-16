@@ -26,27 +26,27 @@
   <div class="authors">Melchor Saiz-Pardo Sanz, María García Martos y Felicia Elena Marginean</div>
 
  <!--  <div id="accordiondiv"> -->
-  <ul class="mainmenu collapse-container" id="menu-container">
+  <ul class="mainmenu xcollapse-container" id="menu-container">
 
     <li class="menuitem">Introducción</li>
-    <ul class="submenu" style="list-style-type: none">
-      <li class="subitem"><a href="article31.html">Introducción</a></li>
+    <ul class="submenu hideMe">
+      <li class="subitem" data-doc="article31.html">Introducción</li>
     </ul>
 
     <li class="menuitem">Anatomía patológica de los tumores del estroma
       gastro-intestinal</li>
-    <ul class="submenu" style="list-style-type: none">
-      <li class="subitem"><a href="article321.html">Localización</a></li>
-      <li class="subitem"><a href="article322.html">3.2.2. Características macroscópicas</a></li>
-      <li class="subitem"><a href="article323.html">3.2.3. Características microscópicas</a></li>
+    <ul class="submenu hideMe">
+      <li class="subitem" data-doc="article321.html">Localización</li>
+      <li class="subitem" data-doc="article322.html">3.2.2. Características macroscópicas</li>
+      <li class="subitem" data-doc="article323.html">3.2.3. Características microscópicas</li>
     </ul>
 
     <li class="menuitem">Clasificacion pronostica y sistemas de establecimiento del riesgo en GIST</li>
-    <ul class="submenu">
-      <li class="subitem"><a href="article330.html">Introcucción</a></li>
-      <li class="subitem"><a href="article331.html">Clasificacion de Consenso Instituto Nacional de Salud (NIH)/Clasificacion de Fletcher</a></li>
-      <li class="subitem"><a href="article332.html">3.3.2. Criterios de malignidad en GIST del Instituto de Patologia de las Fuerzas Armadas (AFIP)/Clasificacion de Miettinen</a></li>
-      <li class="subitem"><a href="article335.html">3.3.5. Sistema de clasificación pronóstica de la UICC/Clasificación TNM 2010</a></li>
+    <ul class="submenu hideMe">
+      <li class="subitem" data-doc="article330.html">Introcucción</li>
+      <li class="subitem" data-doc="article331.html">Clasificacion de Consenso Instituto Nacional de Salud (NIH)/Clasificacion de Fletcher</li>
+      <li class="subitem" data-doc="article332.html">3.3.2. Criterios de malignidad en GIST del Instituto de Patologia de las Fuerzas Armadas (AFIP)/Clasificacion de Miettinen</li>
+      <li class="subitem" data-doc="article335.html">3.3.5. Sistema de clasificación pronóstica de la UICC/Clasificación TNM 2010</li>
     </ul>
 
   </ul>
@@ -58,7 +58,8 @@
     <h1 class="og-footer-title">Sponsors</h1>
   </footer>
 
-  <script src="/angular126/angular.js"></script>
+  <script src="js/vendor/underscore152.js"></script>
+  <script src="js/vendor/angular.js"></script>
   <script src="js/vendor/jquery-1.10.2.js"></script>
   <script src="js/vendor/jquery.collapsible.js"></script>
   <script type="text/javascript">
@@ -71,10 +72,43 @@
                           nxt.slideUp();
     });
     */
+    /*
     $('#menu-container').collapsible('accordion', {
       // contentOpen: 0,
       animate: true
     });
+    */
+
+    // custom animation
+    // var myCollapsable = $('ul.ulCollapsable');
+    var myCollapsable = $('ul.submenu');
+
+    // implement links | change view
+    $('li[data-doc]').click (function () {
+      var newView = $(this).attr('data-doc');
+      window.location.href = newView;
+    });
+
+    // expand - collapse sections
+    $('ul.mainmenu li').click(function() {
+      var $ulSubmenu = $(this).next('ul.submenu');
+      var ulSubmenuMaxh = $ulSubmenu.css('max-height');
+      if (ulSubmenuMaxh == '0px' || ulSubmenuMaxh == 'none') {
+        var $children = $ulSubmenu.children();
+        var newHeight = _.reduce($children, function (memo, child) {
+          return memo+$(child).outerHeight();
+        }, 0);
+        console.log('list height: '+newHeight);
+        // $(this).next('ul.ulCollapsable').children().first().height();
+        $('ul.submenu').css('max-height', 0);
+        $ulSubmenu.css('max-height', newHeight);
+      }
+      else
+        $ulSubmenu.css('max-height', 0);
+
+    });
+
+
   </script>
 
 </body>

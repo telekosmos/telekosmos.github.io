@@ -123,10 +123,22 @@ body {
 // LIST rules ////////////////////////////////////////////////////////////
 .mainmenu {
   .menuprops();
+  & :last-child {
+    & :last-child {
+      border-bottom: 1px solid #271c02;
+      // line-height: 1.8em;
+    }
+  }
 }
 
 .submenu {
   .menuprops(#F8DC96); // .menuprops(white);
+  transition: max-height .1s linear;
+  -webkit-transition: max-height .1s linear;
+  -moz-transition: max-height 1s linear;
+  -o-transition: max-height 1s;
+
+  display: block;
 }
 
 .chapter-items {
@@ -144,7 +156,6 @@ body {
 }
 
 .menuitem {
-
   @media screen and (min-width: 1024px) {
     .li-bg-image('../img/chevron-right.png', 96%, 3% auto);
   }
@@ -153,10 +164,9 @@ body {
   }
 
   .item-link(#271C02);
-  a {
-    // .item-link(grey);
-    .item-link(#271C02);
-  }
+  border-top: 1px solid #271c02;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 .subitem {
@@ -166,16 +176,22 @@ body {
   @media (max-width: 480px) {
     .li-bg-image('../img/chevron-right.png', 98%, 10% auto);
   }
-
-  a {
-    // .item-link(grey, white);
-    .item-link(#271C02);
-    &:hover {
-      background-color: lightgrey;
-    }
-  }
+  /*
+  border-left: 15px solid #271C02; // 614B12
+  line-height: 2.5em;
+  */
+  .item-link(#271C02);
+  line-height: 1.2em;
+  padding-bottom: .2em;
+  padding-top: .2em;
 }
 
+.showMe {
+  max-height: 100px;
+}
+.hideMe {
+  max-height: 0px;
+}
 // collapsible styles
 
 /*
@@ -184,8 +200,31 @@ body {
   .li-bg-image('../img/chevron-right.png', 96%, 3% auto);
 }
 */
-
 // EO LIST rules /////////////////////////////////////////////////////////
+
+.ul_main {
+  list-style-type: none;
+  width: 100%;
+}
+.ul_main>:nth-child(odd) {
+  padding: 5px;
+  background-color: lightgray;
+  border: 1px solid black;
+  margin: auto;
+}
+/*.ul_main>:nth-child(even) {
+  background-color: white;
+  display: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+*/
+.ul_main>:nth-child(even) p {
+  padding: 0px 5px;
+}
+
 
 // Article styles ///////////////////////////////////////////////////////
 .article-title {
