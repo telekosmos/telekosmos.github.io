@@ -114,10 +114,12 @@ body {
   background-color: #f8dc96;
   font-family: gobold-light;
   font-size: 1.1em;
-  transition: max-height 0.1s linear;
-  -webkit-transition: max-height 0.1s linear;
+  /*
+  transition: max-height .1s linear;
+  -webkit-transition: max-height .1s linear;
   -moz-transition: max-height 1s linear;
   -o-transition: max-height 1s;
+  */
   display: block;
 }
 .chapter-items {
