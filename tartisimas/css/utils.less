@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "title-font";
+  src: url(fonts/ChallengeContour.ttf);
+}
+
+@font-face {
+  font-family: "GrandHotel";
+  src: url(fonts/GrandHotel-Regular.ttf);
+}
+
+@font-face {
+  font-family: "TeamSpirit";
+  src: url(../fonts/TeamSpiritNF.ttf);
+}
+
+
+@font-face {
+  font-family: "Sverige";
+  src: url(../fonts/SverigeScriptClean.ttf);
+}
+
+@font-face {
+  font-family: "SverigeScript";
+  src: url(../fonts/SverigeScriptDecorated.ttf);
+}
+
+@font-face {
+  font-family: "Champignon";
+  src: url(../fonts/Champignon.otf);
+}
+
+// Mixins
+.padding-list (@left: 8em, @top, @bottom) {
+  padding-left: @left;
+  padding-top: @top;
+  padding-bottom: @bottom;
+}
+
+
+.li-before (@img-url) {
+  content: '';
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 1%;
+  position: absolute;
+  border: 1px solid black;
+  background: url(@img-url) no-repeat center center;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 50%;
+
+  behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
+}
+
+.gallery (@bg-color: pink) {
+  /*
+  border: 1px solid #000000;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  */
+  background-color: @bg-color;
+  width: 300px;
+  height: 300px;
+  // margin: auto;
+}
+// EO mixins

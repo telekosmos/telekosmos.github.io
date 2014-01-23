@@ -1,0 +1,406 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+@font-face {
+  font-family: "title-font";
+  src: url(fonts/ChallengeContour.ttf);
+}
+@font-face {
+  font-family: "GrandHotel";
+  src: url(fonts/GrandHotel-Regular.ttf);
+}
+@font-face {
+  font-family: "TeamSpirit";
+  src: url(../fonts/TeamSpiritNF.ttf);
+}
+@font-face {
+  font-family: "Sverige";
+  src: url(../fonts/SverigeScriptClean.ttf);
+}
+@font-face {
+  font-family: "SverigeScript";
+  src: url(../fonts/SverigeScriptDecorated.ttf);
+}
+@font-face {
+  font-family: "Champignon";
+  src: url(../fonts/Champignon.otf);
+}
+@font-face {
+  font-family: "title-font";
+  src: url(fonts/ChallengeContour.ttf);
+}
+@font-face {
+  font-family: "GrandHotel";
+  src: url(fonts/GrandHotel-Regular.ttf);
+}
+@font-face {
+  font-family: "TeamSpirit";
+  src: url(../fonts/TeamSpiritNF.ttf);
+}
+@font-face {
+  font-family: "Sverige";
+  src: url(../fonts/SverigeScriptClean.ttf);
+}
+@font-face {
+  font-family: "SverigeScript";
+  src: url(../fonts/SverigeScriptDecorated.ttf);
+}
+@font-face {
+  font-family: "Champignon";
+  src: url(../fonts/Champignon.otf);
+}
+/*
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+*/
+html,
+body {
+  height: 100%;
+  font: 100%/1.5em "PT Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/*
+header h1 {
+  font-family: Champignon;
+  font-style: oblique;
+  text-shadow: -2px 0 #301809, 0 2px #301809, 2px 0 #301809, 0 -2px #301809;
+  color: lightyellow;
+  font-size: 16em;
+  line-height: 1em;
+  margin-bottom: 0.2em;
+}
+header span {
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: bold;
+  color: darkorange;
+}
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+header #title {
+  padding-top: 20%;
+  text-align: center;
+}
+header #subtitle {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.container-full {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.placeholder {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  position: absolute;
+}
+*/
+header h1 {
+  font-family: Champignon;
+  font-style: oblique;
+  text-shadow: -2px 0 #301809, 0 2px #301809, 2px 0 #301809, 0 -2px #301809;
+  color: lightyellow;
+  font-size: 6em;
+  line-height: 1em;
+  margin-bottom: 0.2em;
+}
+header span {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+  color: darkorange;
+}
+header h2 {
+  font-size: 1.6em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+header #title {
+  padding-top: 20%;
+  text-align: center;
+}
+header #subtitle {
+  text-align: center;
+  padding-top: 5%;
+}
+.customband {
+  background: url(../img/lollis-sm-blur768.jpg) no-repeat center center fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#aboutus {
+  height: 100px;
+  background-color: #ffff00;
+  margin: 100px 0 0 0;
+}
+/*
+div#icn {
+  background: url(../img/choco_cake.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  display: inline;
+}
+*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  header h1 {
+q    font-family: Champignon;
+    font-style: oblique;
+    text-shadow: -2px 0 #301809, 0 2px #301809, 2px 0 #301809, 0 -2px #301809;
+    color: lightyellow;
+    font-size: 16em;
+    line-height: 1em;
+    margin-bottom: 0.2em;
+  }
+  header span {
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: bold;
+    color: darkorange;
+  }
+  header h2 {
+    font-size: 1.6em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  header #title {
+    padding-top: 20%;
+    text-align: center;
+  }
+  header #subtitle {
+    text-align: center;
+    padding-top: 5%;
+  }
+  .container-full {
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .placeholder {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    position: absolute;
+  }
+  div.band .columns {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .customband {
+    background: url(../img/lolipops-small-blur.jpg) no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  /*
+  header.band {
+    /* background-image:url(../img/background.jpg); *
+    background-image: url(../img/lolipops-small-blur.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    background-position: 0 0;
+  }
+
+  header.band h1 {
+    font-size: 8em;
+  }
+  *
+  section.band h2 {
+    font-size: 2.5em;
+  }
+  */
+  section#circles {
+    /*
+    background: url(../img/whitelolli-small.jpg) no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    */
+    background-color: #d3d3d3;
+    width: 100%;
+    padding: 0 15px;
+  }
+  section#circles div img {
+    border: 5px solid;
+    border-color: #ae609d;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
+  }
+  section#events img {
+    width: 120px;
+    height: 120px;
+    margin-right: 10%;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-color: gold;
+    border-style: solid;
+    border-width: 3px;
+    background-color: #04c1bf;
+    behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
+  }
+  section#events div.row {
+    margin-bottom: 1%;
+  }
+  .mycolor {
+    color: #000000;
+  }
+  .ev-font {
+    font-size: 1.5em;
+  }
+  .list-group-item {
+    border: 0px;
+  }
+  li#bday:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url("../img/choco_cake.gif") no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+    behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
+  }
+  li#children:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url("../img/choco_cake.gif") no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+    behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
+  }
+  li#families:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url("../img/choco_cake.gif") no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+    behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
+  }
+  li#aniversary:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url("../img/choco_cake.gif") no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+    behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
+  }
+  li#bday:after {
+    /* background: url(../img/choco_cake.gif) no-repeat center center; */
+  }
+  /*
+  section#events {
+    li {
+      .padding-list(8em, 3em, 3em);
+    }
+  }
+
+  @-moz-document url-prefix() {
+
+    section#events {
+      li {
+        .padding-list(10em, 4em, 4em);
+      }
+    }
+  }
+  */
+  section#gallery div#photos.row {
+    width: 80%;
+    margin: auto;
+  }
+  section#gallery img {
+    width: 300px;
+    height: 300px;
+  }
+  section#gallery #gal1 {
+    /* section#gallery div.row div.col-md-2 { */
+    /*
+  border: 1px solid #000000;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  */
+    background-color: #ffc0cb;
+    width: 300px;
+    height: 300px;
+  }
+  section#gallery #gal2 {
+    /*
+  border: 1px solid #000000;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  */
+    background-color: #add8e6;
+    width: 300px;
+    height: 300px;
+  }
+  section#gallery #gal3 {
+    /*
+  border: 1px solid #000000;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  */
+    background-color: #ffa07a;
+    width: 300px;
+    height: 300px;
+  }
+  a.button {
+    padding: 0.75em 1.5em;
+  }
+  footer {
+    text-align: left;
+  }
+  .last {
+    text-align: right;
+  }
+}

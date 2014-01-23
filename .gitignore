@@ -1,3 +1,5 @@
-*~
+./**/*~
 .DS_Store
-oncosur/.idea/**
+oncosur/.idea/
+**/*.pdf
+**/*.ppt*
