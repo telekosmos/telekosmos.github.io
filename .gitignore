@@ -3,3 +3,5 @@
 oncosur/.idea/
 **/*.pdf
 **/*.ppt*
+oncosur/css/*.css
+tartisimas/css/*.css
