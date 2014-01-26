@@ -54,27 +54,43 @@
   -->
 
   <!-- Hidden for mobile -->
-  <section id="circles" class="hidden-xs hidden-sm">
+  <section id="circles" xclass="hidden-xs hidden-sm">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="text-align: center;">
           <h2>Deliciosos dulces caseros</h2>
         </div>
       </div>
-      <div class="row">
+
+      <div class="row hidden-xs hidden-sm">
         <div class="col-md-12 col-sm-12" style="height: 500px;">
-        <img src="img/colorful-lolli-sm.png" class="img-responsive placeholder"
-             id="imgcircle-left"
-             data-400="left:-300%;"
-             data-700="left:15%; margin-top: 1%;"/>
-        <img src="img/plastic-lolli-sm.png" class="img-responsive placeholder"
-             id="imgcircle-center"
-             data-300="left:-200%;margin-top: 10%;"
-             data-700="left:40%;"/>
-        <img src="img/rounded-hearts-sm.png" class="img-responsive placeholder"
-             id="imgcircle-right"
-             data-200="left:-100%;margin-top: 19%;"
-             data-700="left:65%;"/>
+          <img src="img/colorful-lolli-sm.png" class="img-responsive placeholder"
+               id="imgcircle-left"
+               data-400="left:-300%;"
+               data-700="left:15%; margin-top: 1%;"/>
+          <img src="img/plastic-lolli-sm.png" class="img-responsive placeholder"
+               id="imgcircle-center"
+               data-300="left:-200%;margin-top: 10%;"
+               data-700="left:40%;"/>
+          <img src="img/rounded-hearts-sm.png" class="img-responsive placeholder"
+               id="imgcircle-right"
+               data-200="left:-100%;margin-top: 19%;"
+               data-700="left:65%;"/>
+        </div>
+      </div>
+
+      <div class="row visible-xs visible-sm">
+        <div class="col-sm-4">
+          <img src="img/colorful-lolli-sm.png" class="img-responsive placeholder"
+               id="imgcircle-left" />
+        </div>
+        <div class="col-sm-4">
+          <img src="img/plastic-lolli-sm.png" class="img-responsive placeholder"
+               id="imgcircle-center" />
+        </div>
+        <div class="col-sm-4">
+          <img src="img/rounded-hearts-sm.png" class="img-responsive placeholder"
+               id="imgcircle-right" />
         </div>
 
       </div>
@@ -82,7 +98,7 @@
     </div>
   </section>
 
-  <!-- section circles for mobile w/o skrollr -->
+  <!-- section circles for mobile w/o skrollr --
   <section id="circles" class="visible-xs visible-sm">
     <div class="container">
       <div class="row">
@@ -108,7 +124,7 @@
 
     </div>
   </section>
-
+  -->
 
   <section id="events">
     <div class="container">
@@ -160,7 +176,7 @@
           <img src="img/caramelos.png" data-bottom="opacity: 0;"
                data-center="opacity: 1;">
         </div>
-        <div class="col-xs-6" style="padding-top: 1.9em;">
+        <div class="col-xs-6">
           <span>Cumpleaños</span>
         </div>
       </div>
@@ -170,7 +186,7 @@
           <img src="img/redlollipop.png" data-bottom="opacity: 0;"
                data-center="opacity: 1;">
         </div>
-        <div class="col-xs-6" style="padding-top: 1.9em;">
+        <div class="col-xs-6">
           <span>Fiestas infantiles</span>
         </div>
       </div>
@@ -180,7 +196,7 @@
           <img src="img/familycake.png" xdata-bottom="opacity: 0;"
                xdata-center="opacity: 1;">
         </div>
-        <div class="col-xs-6" style="padding-top: 1.em;">
+        <div class="col-xs-6">
           <span>Comidas y reuniones familiares</span>
         </div>
       </div>
@@ -190,53 +206,76 @@
           <img src="img/weddingcake.png" xdata-bottom="opacity: 0;"
                xdata-center="opacity: 1;">
         </div>
-        <div class="col-xs-6" style="padding-top: 1.9em;">
+        <div class="col-xs-6">
           <span>Aniversarios</span>
         </div>
       </div>
 
-
     </div>
   </section>
 
-  <!--
   <section id="gallery">
-    <div class="container-full">
+    <div class="container">
+    
       <div class="row">
-        <div class="col-md-12" style="text-align: center; background-color: #808080">
+        <div class="col-md-12" style="text-align: center; background-color: #808080; color:orange; font-size: 2em;">
           <h2>Deliciosos dulces caseros</h2>
         </div>
       </div>
-      !-- GALLERIES --
+    
       <div class="row" id="photos">
-        <div class="col-md-4" style="overflow-x: hidden;">
-          <div id="gal1" style="background-image: url(img/hk-rounded-col.jpg);
-                            background-size: 300px 300px;">
-            <img src="img/ph-rounded-sq.png" style="position:absolute;"
-                             data-100-bottom="left:15px;" data-100-center="left:-300px;"/>
-          </div>
-
-        </div>
-        <div class="col-md-4" style="overflow-x: hidden; height:300px;">
-          <div id="gal2" style="background-image: url(img/hk-rounded-col.jpg);
-                            background-size: 300px 300px;">
-            <img src="img/ph-rounded-sq.png" style="position:absolute;"
-                 data-100-bottom="left:15px;" data-100-center="left:-300px;"/>
+      <!-- si el viewport fuera menos que 768px wide, esto se apilaría -->
+        <div class="col-sm-4" xstyle="border: 1px solid black">
+          <div id="gal1">
+            <img src="img/ph-rounded-sq.png" class="hidden-xs"
+                  data-bottom-bottom="left:3.6em;" data-top="left:-100px;"/>
           </div>
         </div>
-        <div class="col-md-4" style="overflow-x: hidden;">
-          <div id="gal3" style="background-image: url(img/hk-rounded-col.jpg);
-                            background-size: 300px 300px;">
-            <img src="img/ph-rounded-sq.png" style="position:absolute;"
-                             data-100-bottom="left:15px;" data-100-center="left:-300px;"/>
+        <div class="col-sm-4" zstyle="border: 1px solid black">
+          <div id="gal2">
+          <img src="img/ph-rounded-sq.png" class="hidden-xs"
+                  data-bottom-bottom="left:3.6em;" data-top="left:-100px;"/>
           </div>
-
+        </div>
+        <div class="col-sm-4" xstyle="border: 1px solid black">
+          <div id="gal3">
+            <img src="img/ph-rounded-sq.png" class="hidden-xs"
+                    data-bottom-bottom="left:3.6em;" data-top="left:-100px;"/>
+          </div>
         </div>
       </div>
-      <!-- EO GALLERIES --
+
+      <!-- GALLERIES --
+      <div class="row" id="photos">
+        <div class="col-sm-4" style="overflow-x: hidden;">
+        <!--
+          <div id="gal1" style="background-image: url(img/hk-rounded-col.jpg);
+                            background-size: 300px 300px;">
+        --
+          <div id="gal1">
+            <img src="img/ph-rounded-sq.png"
+                xdata-100-bottom="left:0px;" xdata-100-center="left:-300px;"/>
+          </div>
+        </div>
+
+        <div class="col-sm-4" style="overflow-x: hidden;">
+          <div id="gal2">
+            <img src="img/ph-rounded-sq.png"
+                 xdata-100-bottom="left:0px;" xdata-100-center="left:-300px;"/>
+          </div>
+        </div>
+        
+        <div class="col-sm-4" style="overflow-x: hidden;">
+          <div id="gal3">
+            <img src="img/ph-rounded-sq.png"
+                xdata-100-bottom="left:0px;" xdata-100-center="left:-300px;"/>
+          </div>
+        </div>
+      </div>
+      <!-- EO GALLERIES -->
     </div>
   </section>
-  -->
+  
   <section id="aboutus">
     <div class="container">
       <div class="row">

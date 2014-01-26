@@ -150,6 +150,16 @@ section#circles {
     }
   }
 
+  // div.col-md-4 {
+  div.col-sm-4 {
+    margin-top: 1em;
+
+    img[id^="imgcircle"] {
+      width: 75%;
+      height: 75%;
+      margin: 0 auto;
+    }
+  }
   div img {
     border: 5px solid;
     border-color: #ae609d;
@@ -197,10 +207,9 @@ section#events {
     font-style: italic;
     // margin-left: 2.5em;
   }
-
 }
 
-
+/*
 div.col-md-4 {
   margin-top: 1em;
 
@@ -210,7 +219,60 @@ div.col-md-4 {
     margin: 0 auto;
   }
 }
+*/
 
+@media (max-width: 768px) { // corresponds with .col-xs classes
+  section#gallery {
+    div.container {
+      width: 100%;
+    
+      div#photos.row {
+        // width: 80%;
+        margin: auto;
+        // background-color: lightyellow;
+
+        div.col-sm-4 {
+        // div.col-md-4 {
+          overflow-x: hidden;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 1em;
+          padding-top: 1em;
+          // margin-right: 1em;
+          // margin-left: 1em;
+        }
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      #gal1 {
+        /*
+        background-color: #ffc0cb;
+        width: 200px;
+        height: 200px;
+        background-size: 200px 200px;
+        background-image: url(img/hk-rounded-col.jpg);
+        */
+
+        .gallery(#ffc0cb, "../img/hk-rounded-col.jpg", 200px);
+        background-color: blue;
+      }
+
+      #gal2 {
+        .gallery(#add8e6, "../img/hk-rounded-col.jpg", 200px);
+        background-color: red;
+      }
+      #gal3 {
+        .gallery(#ffa07a, "../img/hk-rounded-col.jpg", 200px); 
+        background-color: green;
+      }
+    } // EO div.container
+
+  }
+}
 
 #aboutus {
   height: 100px; 

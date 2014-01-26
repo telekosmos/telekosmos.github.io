@@ -53,16 +53,18 @@
   behavior: url(/~bioinfo/css3pie1.0/PIE.htc);
 }
 
-.gallery (@bg-color: pink) {
+.gallery (@bg-color: pink, @bg-img, @size) {
   /*
   border: 1px solid #000000;
   border-radius: 10%;
   -webkit-border-radius: 10%;
   -moz-border-radius: 10%;
   */
-  background-color: @bg-color;
-  width: 300px;
-  height: 300px;
-  // margin: auto;
+  // background-color: @bg-color;
+  background-image: url(@bg-img);
+  background-size: @size @size;
+  width: @size;
+  height: @size;
+  margin: 0 auto;
 }
 // EO mixins

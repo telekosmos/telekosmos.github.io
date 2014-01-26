@@ -105,6 +105,9 @@
       div.col-xs-6:first-child {
         text-align: right;
       }
+      div.col-xs-6:last-child {
+        padding-top: 2.5em;
+      }
     }
 
     // .evfont don't apply the default font :-S
@@ -183,22 +186,61 @@
     /* background: url(../img/choco_cake.gif) no-repeat center center; */
   }
   
-  section#gallery div#photos.row {
-    width: 80%;
-    margin: auto;
+  section#gallery {
+    div.container {
+      width: 100%;
+    
+      div#photos.row {
+        //width: 80%;
+        margin: auto;
+        // background-color: lightgrey; // this is gray from 768px wide on
+
+        div.col-sm-4 {
+        // div.col-md-4 {
+          overflow-x: hidden;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+
+      img {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+      }
+
+      #gal1 {
+        /*
+        background-color: #ffc0cb;
+        width: 300px;
+        height: 300px;
+        */
+        .gallery(#ffc0cb, "../img/hk-rounded-col.jpg", 300px);
+        background-color: red;
+        width: 300px;
+        height: 300px;
+      }
+
+      #gal2 {
+        .gallery(#add8e6, "../img/hk-rounded-col.jpg", 300px);
+        background-color: green;
+        width: 300px;
+        height: 300px;
+      }
+      #gal3 {
+        .gallery(#ffa07a, "../img/hk-rounded-col.jpg", 300px);
+        background-color: blue;
+        width: 300px;
+        height: 300px;
+      }
+    } // EO div.container
+
   }
-  section#gallery img {
-    width: 300px;
-    height: 300px;
-  }
+
+  /*
   section#gallery #gal1 {
-    /* section#gallery div.row div.col-md-2 { */
-    /*
-  border: 1px solid #000000;
-  border-radius: 10%;
-  -webkit-border-radius: 10%;
-  -moz-border-radius: 10%;
-  */
+    * section#gallery div.row div.col-md-2 { *
+    
     background-color: #ffc0cb;
     width: 300px;
     height: 300px;
@@ -214,6 +256,7 @@
     width: 300px;
     height: 300px;
   }
+  */
   a.button {
     padding: 0.75em 1.5em;
   }
