@@ -2,6 +2,7 @@
 .DS_Store
 oncosur/.idea/
 **/*.pdf
+**/*.xcf
 **/*.ppt*
 # oncosur/css/*.css
 # tartisimas/css/*.css

@@ -57,7 +57,7 @@
   <section id="circles" xclass="hidden-xs hidden-sm">
     <div class="container">
       <div class="row">
-        <div class="col-md-12" style="text-align: center;">
+        <div class="col-sm-12" style="text-align: center;">
           <h2>Deliciosos dulces caseros</h2>
         </div>
       </div>
@@ -133,43 +133,6 @@
           <h2>Tartas y repostería para la mejor fiesta</h2>
         </div>
       </div>
-      <!--
-      <div class="row">
-        <div class="col-xs-6">
-          <img src="img/caramelos.png" xdata-bottom="opacity: 0;"
-               xdata-center="opacity: 1;">
-        </div>
-        <div class="col-xs-6" style="padding-top: 2em;">
-          <span>Cumpleaños</span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <img src="img/redlollipop.png" xdata-bottom="opacity: 0;"
-               xdata-center="opacity: 1;">
-          <span>Fiestas infantiles</span>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-xs-6">
-          <img src="img/familycake.png" xdata-bottom="opacity: 0;"
-               xdata-center="opacity: 1;">
-        </div>
-        <div class="col-xs-6" style="padding-top: 1.em;">
-          <span>Comidas y reuniones familiares</span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <img src="img/weddingcake.png" xdata-bottom="opacity: 0;"
-               xdata-center="opacity: 1;">
-          <span>Aniversarios</span>
-        </div>
-      </div>
-      -->
 
       <div class="row">
         <div class="col-xs-6">
@@ -193,8 +156,8 @@
       
       <div class="row">
         <div class="col-xs-6">
-          <img src="img/familycake.png" xdata-bottom="opacity: 0;"
-               xdata-center="opacity: 1;">
+          <img src="img/familycake.png" data-bottom="opacity: 0;"
+               data-center="opacity: 1;">
         </div>
         <div class="col-xs-6">
           <span>Comidas y reuniones familiares</span>
@@ -203,8 +166,8 @@
 
       <div class="row">
         <div class="col-xs-6">
-          <img src="img/weddingcake.png" xdata-bottom="opacity: 0;"
-               xdata-center="opacity: 1;">
+          <img src="img/weddingcake.png" data-bottom="opacity: 0;"
+               data-center="opacity: 1;">
         </div>
         <div class="col-xs-6">
           <span>Aniversarios</span>
@@ -218,7 +181,7 @@
     <div class="container">
     
       <div class="row">
-        <div class="col-md-12" style="text-align: center; background-color: #808080; color:orange; font-size: 2em;">
+        <div class="col-md-12" id="gallery-title" style="">
           <h2>Deliciosos dulces caseros</h2>
         </div>
       </div>
@@ -228,59 +191,60 @@
         <div class="col-sm-4" xstyle="border: 1px solid black">
           <div id="gal1">
             <img src="img/ph-rounded-sq.png" class="hidden-xs"
-                  data-bottom-bottom="left:3.6em;" data-top="left:-300px;"/>
+                  data-bottom-center="left:3.6em;" data-center="left:-300px;"/>
           </div>
         </div>
         <div class="col-sm-4" zstyle="border: 1px solid black">
           <div id="gal2">
           <img src="img/ph-rounded-sq.png" class="hidden-xs"
-                  data-bottom-bottom="left:3.6em;" data-top="left:-300px;"/>
+                  data-bottom-center="left:3.6em;" data-center="left:-300px;"/>
           </div>
         </div>
         <div class="col-sm-4" xstyle="border: 1px solid black">
           <div id="gal3">
             <img src="img/ph-rounded-sq.png" class="hidden-xs"
-                    data-bottom-bottom="left:3.6em;" data-top="left:-300px;"/>
+                    data-bottom-center="left:3.6em;" data-center="left:-300px;"/>
           </div>
         </div>
       </div>
 
-      <!-- GALLERIES --
-      <div class="row" id="photos">
-        <div class="col-sm-4" style="overflow-x: hidden;">
-        <!--
-          <div id="gal1" style="background-image: url(img/hk-rounded-col.jpg);
-                            background-size: 300px 300px;">
-        --
-          <div id="gal1">
-            <img src="img/ph-rounded-sq.png"
-                xdata-100-bottom="left:0px;" xdata-100-center="left:-300px;"/>
-          </div>
-        </div>
-
-        <div class="col-sm-4" style="overflow-x: hidden;">
-          <div id="gal2">
-            <img src="img/ph-rounded-sq.png"
-                 xdata-100-bottom="left:0px;" xdata-100-center="left:-300px;"/>
-          </div>
-        </div>
-        
-        <div class="col-sm-4" style="overflow-x: hidden;">
-          <div id="gal3">
-            <img src="img/ph-rounded-sq.png"
-                xdata-100-bottom="left:0px;" xdata-100-center="left:-300px;"/>
-          </div>
-        </div>
-      </div>
-      <!-- EO GALLERIES -->
     </div>
   </section>
-  
+
+
   <section id="aboutus">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12" id="aboutus-title" style="">
+          <h2>Contacta!</h2>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="color: white;">
+          Si te gustó lo que viste, quieres saber más, hacer algún encargo o alguna pregunta, simplemente usa el formulario siguiente para ponerte en contacto con nosotros!!
+        </div>
+      </div>
+
+      <div class="row">
+        <form role="form">
+        <div class="col-sm-4 col-sm-offset-3 col-xs-8 col-xs-offset-1">
+          <div class="form-group">
+            <label for="frm_name">Nombre</label>
+            <input type="text" class="form-control" id="frm_name" placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <label for="form_email">Correo electrónico</label>
+            <input type="email" class="form-control" id="form_email" placeholder="usermail@examplemail.com">
+          </div>
+        </div>
+        <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+          <div class="form-group">
+            <label for="form_email">Texto</label>
+            <textarea class="form-control" id="form_text" rows="3"></textarea>
+          </div>
+        </div>
+        </form>  
         </div>
       </div>
     </div>

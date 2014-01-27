@@ -60,9 +60,10 @@
   }
   
   section#circles {
-    background-color: #d3d3d3;
+    // background-color: #d3d3d3;
     width: 100%;
     padding: 0 15px;
+    border-top: 5px solid #21A3A2;
 
     div img {
       border: 5px solid;
@@ -80,6 +81,9 @@
 
 
   section#events {
+    background-color: #0483C1;
+    border-top: 5px solid #2178A3;
+
     img {
       width: 120px;
       height: 120px;
@@ -114,6 +118,7 @@
     div span {
       font-size: 1.5em;
       font-style: italic;
+      color: white;
     }
   }
 
@@ -187,9 +192,19 @@
   }
   
   section#gallery {
+    background-color: #BF04C1;
+    border-top: 5px solid #A221A3;
+
+    #gallery-title {
+      text-align: center; 
+      color:orange; 
+      font-size: 2em;
+    }
+
     div.container {
       width: 100%;
-    
+      padding-bottom: 3em;
+
       div#photos.row {
         //width: 80%;
         margin: auto;
@@ -204,7 +219,7 @@
       }
 
       img {
-        // position: absolute;
+        position: absolute;
         width: 300px;
         height: 300px;
       }
@@ -215,21 +230,21 @@
         width: 300px;
         height: 300px;
         */
-        .gallery(#ffc0cb, "../img/hk-rounded-col.jpg", 300px);
-        background-color: red;
+        .gallery(#ffc0cb, "../img/hk-rounded-col.png", 300px);
+        // background-color: red;
         width: 300px;
         height: 300px;
       }
 
       #gal2 {
-        .gallery(#add8e6, "../img/hk-rounded-col.jpg", 300px);
-        background-color: green;
+        .gallery(#add8e6, "../img/hk-rounded-col.png", 300px);
+        // background-color: green;
         width: 300px;
         height: 300px;
       }
       #gal3 {
-        .gallery(#ffa07a, "../img/hk-rounded-col.jpg", 300px);
-        background-color: blue;
+        .gallery(#ffa07a, "../img/hk-rounded-col.png", 300px);
+        // background-color: blue;
         width: 300px;
         height: 300px;
       }

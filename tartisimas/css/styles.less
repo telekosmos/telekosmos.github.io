@@ -136,17 +136,19 @@ header {
 
 
 section#circles {
-  background-color: #d3d3d3;
+  background-color: #04C1BF; // #d3d3d3;
   width: 100%;
   padding: 0 15px;
   font-style: italic;
   font-weight: bold;
   color: darkorange;
+  border-top: 5px solid #21A3A2;
 
   div.col-sm-12 {
     text-align: center;
     h2 {
       color: darkorange;
+      font-size: 1.5em;
     }
   }
 
@@ -155,8 +157,8 @@ section#circles {
     margin-top: 1em;
 
     img[id^="imgcircle"] {
-      width: 75%;
-      height: 75%;
+      width: 50%;
+      height: 50%;
       margin: 0 auto;
     }
   }
@@ -176,6 +178,13 @@ section#circles {
 
 
 section#events {
+  background-color: #0483C1;
+  border-top: 5px solid #2178A3;
+
+  div.container {
+    padding-bottom: 2em;
+  }
+
   img {
     width: 90px;
     height: 90px;
@@ -193,12 +202,21 @@ section#events {
 
   div h2 {
     text-align: center;
-    // font-size: 2em;
+    font-size: 1.5em;
     color: darkorange;
   }
 
   div.row {
     margin-bottom: 1%;
+    // margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+
+
+    div:last-child {
+      padding-top: 2em;
+    }
   }
 
   // .evfont don't apply the default font :-S
@@ -223,8 +241,12 @@ div.col-md-4 {
 
 @media (max-width: 768px) { // corresponds with .col-xs classes
   section#gallery {
+    background-color: #BF04C1;
+    border-top: 5px solid #A221A3;
+
     div.container {
       width: 100%;
+      padding-bottom: 3em;
     
       div#photos.row {
         // width: 80%;
@@ -243,31 +265,26 @@ div.col-md-4 {
         }
       }
 
+      #gallery-title {
+        text-align: center; 
+        color:orange; 
+        font-size: 1.5em;
+      }
+
       img {
-        width: 200px;
-        height: 200px;
+        width: 50%; // 200px;
+        height: 50%; // 200px;
       }
 
       #gal1 {
-        /*
-        background-color: #ffc0cb;
-        width: 200px;
-        height: 200px;
-        background-size: 200px 200px;
-        background-image: url(img/hk-rounded-col.jpg);
-        */
-
-        .gallery(#ffc0cb, "../img/hk-rounded-col.jpg", 200px);
-        background-color: blue;
+        .gallery(#ffc0cb, "../img/hk-rounded-col.png", 200px);
+        // background-color: blue;
       }
-
       #gal2 {
-        .gallery(#add8e6, "../img/hk-rounded-col.jpg", 200px);
-        background-color: red;
+        .gallery(#add8e6, "../img/hk-rounded-col.png", 200px);
       }
       #gal3 {
-        .gallery(#ffa07a, "../img/hk-rounded-col.jpg", 200px); 
-        background-color: green;
+        .gallery(#ffa07a, "../img/hk-rounded-col.png", 200px); 
       }
     } // EO div.container
 
@@ -275,9 +292,37 @@ div.col-md-4 {
 }
 
 #aboutus {
-  height: 100px; 
-  background-color: #ffff00; // gold; 
-  margin: 100px 0 0 0;
+  bottom: 0px;
+  // border-top: 5px solid #21A376;
+
+  border-top: 5px solid rgba(0, 0, 0, .3); // 3% of transparency
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+
+  background: url(../img/aboutus-bg.jpg) no-repeat center center fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 0;
+
+  div.container {
+    width:100%;
+
+    #aboutus-title {
+      text-align: center; 
+      color:orange; 
+      font-size: 2em; 
+      width:100%;
+    }
+
+    div.row:last-child {
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+    input, textarea {
+      border-radius: 0;
+      border: 1px solid darkorange;
+    }
+  }
 }
 
 
