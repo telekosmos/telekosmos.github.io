@@ -4,5 +4,7 @@ oncosur/.idea/
 **/*.pdf
 **/*.xcf
 **/*.ppt*
+**/casita/css/pure-0.4.2
+**/casita/css/bootstrap*
 # oncosur/css/*.css
 # tartisimas/css/*.css

@@ -1,0 +1,316 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+
+@font-face {
+	font-family: "title-font";
+	src: url(fonts/ChallengeContour.ttf);
+}
+
+@font-face {
+	font-family: "GrandHotel";
+	src: url(fonts/GrandHotel-Regular.ttf);
+}
+
+@font-face {
+	font-family: "TeamSpirit";
+	src: url(../fonts/TeamSpiritNF.ttf);
+}
+
+/*
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+*/
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font: 100%/1.5em"PT Sans", sans-serif
+}
+
+header h1 {
+	font-family: TeamSpirit;
+	color: #e33f0c;
+	font-size: 7em;
+	line-height: 1em;
+	margin-bottom: 1em
+}
+
+.container-full {
+	margin: 0 auto;
+	width: 100%;
+  padding: 0 15px;
+}
+
+header span {
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: bold;
+	color: darkorange;
+}
+
+h2 {
+	font-size:1.6em;
+	margin-top:1.5em;
+	margin-bottom:1.5em
+}
+
+header #title {
+	padding-top: 20%;
+	text-align: center
+}
+
+header #subtitle {
+	text-align: center;
+	padding-top: 5%;
+}
+/*
+.image-rounded {
+  padding: 4px;
+  border: 4px solid gray;
+  border-radius: 50%;
+  max-width: 100%;
+}
+*/
+
+
+section#circles {
+	background-color: #d3d3d3;
+	width: 100%;
+	padding: 0 15px;
+}
+
+section#circles img {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
+
+div#icn {
+  background: url(../img/choco_cake.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  display: inline;
+  /* background-color: red; */
+
+}
+
+@media only screen and (min-width: 767px) {
+
+	div.band .columns {
+		padding-top: 2em;
+		padding-bottom: 2em
+	}
+
+	.customband {
+		background: url(../img/lolipops-small-blur.jpg) no-repeat center center fixed;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: 0 0;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.3);
+	}
+
+	header.band {
+		/* background-image:url(../img/background.jpg); */
+		background-image: url(../img/lolipops-small-blur.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		height: 100%;
+		width: 100%;
+		background-position: 0 0;
+		xpadding: 100%
+	}
+
+	header.band h1 {
+		font-size: 7em
+	}
+
+	section.band h2 {
+		font-size: 2.5em
+	}
+
+	section#circles img#imgcircle-center {
+		margin-top: 25%;
+	}
+
+	section#circles img#imgcircle-right {
+		margin-top: 50%;
+		margin-bottom: 25%;
+	}
+
+	section#events img {
+		width: 120px;
+		height: 120px;
+	}
+
+
+  /*
+  li#bday:before {
+    background-color: pink;
+    margin: 30px 0;
+    /* padding: 0 0 0 75px; *
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-top: -0.1em;
+    position: absolute;
+    top: -2em;
+    width: 40px;
+    border: 1px solid #000000;
+  }
+  */
+
+  .list-group-item {
+     border: 0px;
+}
+
+  li#bday:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url(../img/choco_cake.gif) no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+  }
+
+  li#children:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url(../img/choco_cake.gif) no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+  }
+
+  li#families:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url(../img/choco_cake.gif) no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+  }
+
+  li#aniversary:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 1%;
+    position: absolute;
+    border: 1px solid black;
+    background: url(../img/choco_cake.gif) no-repeat center center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 50%;
+  }
+
+  li#bday:after {
+    /* background: url(../img/choco_cake.gif) no-repeat center center; */
+  }
+
+  li#families {
+    /* background-image: url(../img/choco_cake.gif);
+    background-repeat: no-repeat; */
+    padding-left: 8em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  li#children {
+    /* background-image: url(../img/choco_cake.gif);
+    background-repeat: no-repeat; */
+    padding-left: 8em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  li#aniversary {
+    /* background-image: url(../img/choco_cake.gif);
+    background-repeat: no-repeat; */
+    padding-left: 8em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  li#bday {
+    /* background-image: url(../img/choco_cake.gif);
+    background-repeat: no-repeat; */
+    padding-left: 8em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+
+  section#gallery div#photos.row {
+    width: 80%;
+    margin: auto;
+  }
+
+  section#gallery #gal1 {
+  /* section#gallery div.row div.col-md-2 { */
+    border: 1px solid #000000;
+    border-radius: 10%;
+    background-color: pink;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
+
+  section#gallery #gal2 {
+    border: 1px solid #000000;
+    border-radius: 10%;
+    background-color: darkblue;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
+
+  section#gallery #gal3 {
+    border: 1px solid #000000;
+    border-radius: 10%;
+    background-color: lightsalmon;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
+
+	a.button {
+		padding: 0.75em 1.5em
+	}
+
+	footer {
+		text-align: left
+	}
+
+	.last {
+		text-align: right
+	}
+}

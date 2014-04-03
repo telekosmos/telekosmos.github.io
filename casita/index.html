@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <!--viewport goodness http://enva.to/A79s3G-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="css/pure-0.5.0-rc1/base.css">
+  <link rel="stylesheet" href="css/pure-0.5.0-rc1/grids.css">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Bill</title>
+  <!--
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" >
+  -->
+</head>
+
+<body>
+  <div class="pure-g"> <!-- layout -->
+    <!-- "left margin", maybe has to be replaced for some max-width or so... -->
+    <div class="pure-u-3-24"></div>
+    
+    <div class="pure-u-18-24">
+      <!-- bill header with address, bill number and so -->
+      <div class="pure-g">
+        <div class="pure-u-1 inbox" id="header">
+          <div class="pure-g">
+            <div class="pure-u-1-2">
+              <div  style="position: relative; top: 4em;text-align: left; left: 1em;">
+                Guillermo Comesaña Martínez<br/>
+                <span>Full stack web/mobile engineer</span><br/>
+                Torrecilla del Leal 12, 4ºA<br/>
+                28012 Madrid, Madrid<br/>
+                NIF: 36137947W
+                Teléfono: (+34)667 749650<br/>
+                telekosmos@ymail.com<br/>
+              </div>
+            </div>
+            <div class="pure-u-1-2" style="position: relative; top: 2em;text-align: right; right: 1em;">
+              Factura 406/2014<br/>
+              06 de abril de 2014
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- my and logo client and address -->
+      <div class="pure-g" style="margin-top: 0.5em;">
+        <div class="pure-u-12-24 inbox" id="mylogo">
+          <div style="height: 100%; margin-right: 0.5em; margin-left: 0.5em; background-image: url(img/telekosmos-bluegreen-text.png); background-repeat: no-repeat;background-size: contain; background-position-x: 2em; background-position-y: 0.3em;">
+          
+          </div>
+        </div>
+        <div class="pure-u-12-24 inbox" id="clientlogo">
+          <div style="text-align: left; padding-top: 4em;height: 100%; margin-right: 0.5em; margin-left: 0.5em; background-image: url(img/oncosur-logo.png);background-repeat: no-repeat;">
+          Fundación Oncosur<br/>
+          Gran Vía Marqués del Turia 65-3-11<br/>
+          46005 Valencia, Valencia<br/>
+          NIF: G86133691<br/>
+          Teléfono: (+34)915 608227<br/>
+          secreateria_tecnica@oncosur.org<br/>
+          </div>
+        </div>
+      </div> <!-- EO logos -->
+
+      <!-- component for the items/services charged: item -> price -->
+      <div class="pure-g" style="margin-top: 0.5em;">
+        <div class="pure-u-12-24 inbox" id="item-info">
+          <div style="text-align: left; padding: 4em 0 0 0em;">
+            <div style="background-color: lightblue; padding-left: 0.5em">Diseño e implementación de un prototipo de la app</div>
+          </div>
+        </div>
+        <div class="pure-u-12-24 inbox" id="item-price">
+          <div style="text-align: right; padding: 4em 0em 0 0; xmargin-right: 0.5em; xmargin-left: 0.5em;">
+            <div style="background-color: lightblue; padding-right: 0.5em">1520&euro;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- price itemization for taxes and subtotals -->
+      <div class="pure-g" style="margin-top: 0.5em;">
+        <div class="pure-u-12-24 inbox" id="nothing" style="border: none;">
+          <div style="height: 100%; margin-right: 0.5em; margin-left: 0.5em;">
+          </div>
+        </div>
+        <div class="pure-u-12-24 inbox" id="subprice">
+          <div style="margin-right: 0.5em; margin-left: 0.5em; text-align: right; padding-top: 4em;">
+          Precio: 1520&euro;<br>
+          Base imponible: 1520&euro;<br/>
+          IVA: 21% (319,2&euro;)<br/><br/>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOTAL -->
+      <div class="pure-g" style="margin-top: 0.5em;">
+        <div class="pure-u-12-24 inbox" id="nothing" style="border: none;">
+          <div style="height: 100%; margin-right: 0.5em; margin-left: 0.5em;">
+          
+          </div>
+        </div>
+        <div class="pure-u-12-24 inbox" id="totalprice">
+          <div style="margin-right: 0.5em; margin-left: 0.5em; text-align: right;">
+          <h2 style="margin-top: 0; display: block;">TOTAL</h2>
+          <span style="font-size: 48px">1520&euro;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- some footer -->
+      <div class="footer">
+        &copy; telekosmos 2014
+      </div>
+
+
+
+    </div>
+
+  </div> <!-- EO layout -->
+  
+  
+
+<!--
+<div style="margin: 0 auto;">
+  <div class="pure-g" style="margin: 0 auto; margin-top: 3em;">
+    <div class="pure-u-1-3 inbox">
+      <div style="margin-right: 0.5em; margin-left: 0.5em; background-color: grey;">
+            <h3>Thirds</h3>
+      </div>
+    </div>
+
+    <div class="pure-u-1-3 inbox">
+      <div style="margin-right: 0.5em; margin-left: 0.5em; background-color: grey;">
+      <p>Thirds</p>
+      </div>
+    </div>
+    <div class="pure-u-1-3 inbox">
+      <div style="margin-right: 0.5em; margin-left: 0.5em; background-color: grey;">
+      <p>Thirds</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+-->
+
+</body>
+</html>
