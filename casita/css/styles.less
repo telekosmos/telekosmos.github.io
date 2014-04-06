@@ -1,9 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+
 @font-face {
   font-family: "Scada";
-  src: url(fonts/Scada-Regular.ttf);
+  src: url(../fonts/Scada-Regular.ttf);
 }
 
+@font-face {
+  font-family: "ScadaItal";
+  src: url(../fonts/Scada-Italic.ttf); 
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
 
 /*
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
@@ -21,8 +31,16 @@ body {
   height: 100%;
   // font: 100%/1.5em "PT Sans", sans-serif;
   // font: 100%/1.5em "Scada", sans-serif;
-
+  
 }
+
+html,
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+  font: 100%/1.1em "Roboto", sans-serif;
+}
+
 
 body > .pure-g {
   margin-top: 1em;
@@ -87,6 +105,11 @@ div[class^="pure-u"] > div {
   // height: 100%
 }
 
+.content-wrapper > div {
+  text-align: right; 
+  padding-top: 3em
+}
+
 .gap-no-content {
   // height: 100%; 
   &:extend(.any-content);
@@ -98,15 +121,17 @@ div[class^="pure-u"] > div {
   background-image: url(../img/oncosur-logo.png);
   background-repeat: no-repeat; 
   background-color: #d0d0d0;
-  background-position-y: 0.5em;
+  // background-position-y: 0.5em;
+  background-position: auto 0.5em;
 }
 
 #mylogo > .gap-no-content {
   background-image: url(../img/telekosmos-lightgreen.png); 
   background-repeat: no-repeat;
   background-size: contain; 
-  background-position-x: 2em; 
-  background-position-y: 0.3em;
+  background-position: 2em 0.3em;
+  // background-position-x: 2em; 
+  // background-position-y: 0.3em;
 }
 
 .pure-g > #totalprice {
@@ -154,7 +179,7 @@ div[class^="pure-u"] > div {
 
   .header-right {
     position: relative; 
-    top: 2em;
+    top: 3em;
     text-align: right; 
     right: 1em;
   }
