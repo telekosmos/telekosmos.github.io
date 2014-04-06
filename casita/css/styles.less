@@ -1,7 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+
 @font-face {
   font-family: "Scada";
-  src: url(fonts/Scada-Regular.ttf);
+  src: url(../fonts/Scada-Regular.ttf);
+}
+
+@font-face {
+  font-family: "ScadaItal";
+  src: url(../fonts/Scada-Italic.ttf); 
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
 }
 
 /*
@@ -20,12 +31,31 @@ body {
   height: 100%;
   // font: 100%/1.5em "PT Sans", sans-serif;
   // font: 100%/1.5em "Scada", sans-serif;
-
+  
 }
+
+html,
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+  font: 100%/1.1em "Roboto", sans-serif;
+}
+
 
 body > .pure-g {
   margin-top: 1em;
 }
+
+.setlogo(@bglogo-url, @bgcolor, @bg-pos-x:0px, @bg-pos-y:0px, @bg-size:auto) {
+  // background-image: url(img/oncosur-logo.png);
+  background-image: url(@bglogo-url);
+  background-repeat: no-repeat; 
+  background-color: @bgcolor;
+  background-position-y: @bg-pos-y;
+  background-position-x: @bg-pos-x;
+  background-size: @bg-size;
+}
+
 
 .pure-g > div {
   -webkit-box-sizing: border-box;
@@ -38,7 +68,7 @@ body > .pure-g {
   // border: 1px solid black;
   text-align: center;
   // padding: 1em 0;
-  border: 1px solid black; // #ddd;
+  // border: 1px solid black; // #ddd;
   // background-color: lightgrey;
   // border-left: none;
   // border-right: none;
@@ -52,18 +82,62 @@ body > .pure-g {
   margin: auto;
   position: absolute;
 }
-/*
-div#icn {
-  background: url(../img/choco_cake.gif);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
-  background-position: center;
-  height: 50px;
-  width: 50px;
-  display: inline;
+
+div[class^="pure-g"] {
+  margin-top: 0.6em;
 }
-*/
+
+div[class^="pure-u"] > div {
+  margin: 0.5em 0.3em 0 0.3em;
+  // background-color: lighten(blue, 10%);
+}
+
+.any-content {
+  height: 100%;
+  // background-color: #026386;
+}
+
+.content-wrapper {
+  &:extend(.any-content);
+  padding: 0em 0.5em 0 0.5em; 
+  background-color: #013446;
+  color: white; 
+  // height: 100%
+}
+
+.content-wrapper > div {
+  text-align: right; 
+  padding-top: 3em
+}
+
+.gap-no-content {
+  // height: 100%; 
+  &:extend(.any-content);
+  margin-right: 0.5em; 
+  margin-left: 0.5em;
+}
+
+#clientlogo > .gap-no-content {
+  background-image: url(../img/oncosur-logo.png);
+  background-repeat: no-repeat; 
+  background-color: #d0d0d0;
+  // background-position-y: 0.5em;
+  background-position: auto 0.5em;
+}
+
+#mylogo > .gap-no-content {
+  background-image: url(../img/telekosmos-lightgreen.png); 
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-position: 2em 0.3em;
+  // background-position-x: 2em; 
+  // background-position-y: 0.3em;
+}
+
+.pure-g > #totalprice {
+  margin-bottom: 2em;
+}
+
 @media only screen and (min-width: 767px) {
   // all blocks same height
   div[class^="pure-u"] {
@@ -79,6 +153,37 @@ div#icn {
     margin: 0.5em 0 0.5em 0;
     font-size: 0.9em;
   }
+
+  .header-items {
+    position: relative;
+
+    .left {
+      top: 4em;
+      text-align: left; 
+      left: 1em;  
+    }
+
+    .right {
+      top: 2em;
+      text-align: right; 
+      right: 1em;  
+    }
+  }
+
+  .header-left {
+    position: relative; 
+    top: 3em; 
+    text-align: left; 
+    left: 1em;
+  }
+
+  .header-right {
+    position: relative; 
+    top: 3em;
+    text-align: right; 
+    right: 1em;
+  }
+
 
 /*
   #header {
