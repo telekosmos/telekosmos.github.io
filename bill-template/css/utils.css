@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "title-font";
+  src: url(fonts/ChallengeContour.ttf);
+}
+@font-face {
+  font-family: "GrandHotel";
+  src: url(fonts/GrandHotel-Regular.ttf);
+}
+@font-face {
+  font-family: "TeamSpirit";
+  src: url(../fonts/TeamSpiritNF.ttf);
+}
+@font-face {
+  font-family: "Sverige";
+  src: url(../fonts/SverigeScriptClean.ttf);
+}
+@font-face {
+  font-family: "SverigeScript";
+  src: url(../fonts/SverigeScriptDecorated.ttf);
+}
+@font-face {
+  font-family: "Champignon";
+  src: url(../fonts/Champignon.otf);
+}
