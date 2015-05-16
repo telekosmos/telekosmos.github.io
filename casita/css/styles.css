@@ -74,7 +74,7 @@ div[class^="pure-u"] > div {
   margin-left: 0.5em;
 }
 #clientlogo > .gap-no-content {
-  background-image: url(../img/oncosur-logo.png);
+  background-image: url(http://placehold.it/270x70&text=Business+Logo);
   background-repeat: no-repeat;
   background-color: #d0d0d0;
   background-position: auto 0.5em;
