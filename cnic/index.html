@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style></style></head><body id="preview">
+<h1><a id="Propuesta_0"></a>Propuesta</h1>
+<h3><a id="Diagrama_de_sistema_2"></a>Diagrama de sistema</h3>
+<p><img src="https://raw.githubusercontent.com/telekosmos/telekosmos.github.io/master/cnic/cnic/Slide1.png" alt="cnic/Slide1.png"></p>
+<h3><a id="Necesidades_de_datos_5"></a>Necesidades de datos</h3>
+<ul>
+<li><strong>Usuarios</strong>. Usuarios de la aplicación. Según lo especificado, se supone un máximo de 1000, probablmente menos según lo comentado. De cualquier manera, esa cantidad se adapta a un modelo SQL/Relacional. Implica guardar perfiles de usuario: permisos, preferencias, resultados, historia de operaciones…</li>
+<li><strong>Pacientes</strong>. Los pacientes involucrados en el estudio están ahora mismo en una base de datos <strong>SQL Server</strong>. De acuerdo a los especificado, será necesario acceder a estos datos para realizar los análisis conjuntamente con los datos ’<em>omics</em>'. Habrá que importar los datos anonimizados a una base de datos, en principio NoSQL. Usar un <strong>API REST</strong> para acceder a ellos ralentizará sin duda las consultas de datos biológicos de acuedo con el caso de uso más o menos usual.</li>
+<li><strong>Raw data</strong>. Estos son los datos procedentes directamente de la tecnología de secuenciación y generación de datos ’<em>omics</em>’ y que pasarán a ser preprocesados en el HPC Cluster. Se supone que estos datos se procesarán en principio una vez para obtener datos listos para su análisis y rara vez se accederá a ellos. Si esto es así, se podrían almacenar directamente los ficheros tal cual; si se prevé algún tipo de acción sobre ellos más o menos frecuente, habria que sopesar el guardarlos en un almacenamiento NoSQL porque se prevé un volumen de datos pues importante (un RDBMS no soportaría eficientemente una cantidad tan grande).</li>
+<li><strong>Omics data</strong>. Datos preprocesados. No se ha proporcionado ningún indicativo de la cantidad de datos que pueden ser, pero lo puedo suponer entre centenas de GB y TBs. Esto es importante porque la propuesta es usar un <strong>modelo NoSQL</strong> el cual no escala bien hacia abajo (si el volumen de datos es menor, del orden de decenas de GB o pocos cientos, el rendimiento se degrada).</li>
+<li><strong>Logging</strong>. Logs del uso de la aplicación por los usuarios y de los posibles errores en la carga de los datos ‘omics’ procedentes del preprocesado en el cluster. Hay que hacer una estimación del volumen y velocidad de generación de ’<em>logging data</em>’ y su posterior acceso y análisis para decidir entre un modelo de tabla relacional o NoSQL.</li>
+</ul>
+<h3><a id="Tecnologas_12"></a>Tecnologías</h3>
+<p>En lo que es el panorama de Big Data, que es de lo que parece que estamos hablando en la cuestión de los datos ‘omics’ que se van a analizar, hay múltiples opciones en tecnologías y soluciones.</p>
+<h4><a id="Consideraciones_operacionales_15"></a>Consideraciones operacionales</h4>
+<p>Se supone que los datos ’<em>omics</em>’ no van a variar una vez cargados. Sin embargo, puede haber adiciones de más datos obtenidos de los análisis de los usuarios o después del preprocesado. Luego, las escrituras en esa base de datos van a ser escasas y, además, se supone que se antepone consistencia (que los datos que se requieren no estén ‘sucios’ -<em>dirty reads</em>-) a disponibilidad (al contrario que, por ejemplo, en un caso como el de Facebook). Lo mismo se supone con los datos epidemiológicos de los pacientes.</p>
+<p>De cara a hacer análisis por parte de los usuarios, es importante que el acceso a datos debe tener un <strong>tiempo de respuesta bajo</strong>. Esto se consigue aplicando varias estrategias de configuración del sistema, diseño de la base de datos y desarrollo de las queries.</p>
+<p>El volumen de datos que se espera de los <em>logs</em> es bajo en comparación con los datos preprocesados, aunque es la única parte del sistema la cual está claro que crecerá en volumen de datos aunque no muy rápido aún pudiendo tener picos cuando muchos usuarios están trabajando simultáneamente.</p>
+<h4><a id="Propuestas_22"></a>Propuestas</h4>
+<p>Diferentes tipos de datos de diferentes orígenes implican, como casi siempre, una solución ’<em>políglota</em>’ de almacenamiento.</p>
+<h5><a id="Datos_biolgicosepidemiolgicos_NoSQL_25"></a>Datos biológicos/epidemiológicos: NoSQL</h5>
+<p>Los datos biológicos y epidemiológicos sujetos a análisis, de gran volumen y demandas de gran rendimiento, encajan en un <strong>modelo NoSQL</strong>. Parece claro de <a href="http://www.ncbi.nlm.nih.gov/pubmed/25435347">http://www.ncbi.nlm.nih.gov/pubmed/25435347</a> que hay evidencia de que un sistema clásico no se comporta bien con estos volúmenes de datos. Sin haber podido reproducir el experimento del paper, estoy de acuerdo en que una posible solución para este proyecto puede se la que aportan los autores y es usar un modelo basado en un <strong>stack de Hadoop</strong>.</p>
+<p>Por otra parte, en <a href="http://journalofbigdata.springeropen.com/articles/10.1186/s40537-015-0025-0">http://journalofbigdata.springeropen.com/articles/10.1186/s40537-015-0025-0</a>, los autores hacen un (bastante) detallado análisis de las soluciones NoSQL existentes y encuentran que <strong>MongoDB</strong> tiene un gran rendimiento en lecturas.</p>
+<p>Otra cuestión a tener en cuenta es que, como se comentó, buena parte de la plataforma de análisis ya la aporta <em>tranSMART</em>, que es muy ineficiente para hacer análisis del tipo requerido por su backend en <em>Postgres</em> u <em>Oracle</em>. Existen para Postgres la posibilidad de utilizar <em>Foreign Data Wrappers</em> (<strong>FDW</strong>) a fin de poder utilizar tablas Postgres sobre Hadoop, aunque habría que modificar el DDL generado por tranSMART.</p>
+<p>Sin conocer con más detalle las consultas que se harán sobre qué tipo de datos, es arriesgado dar una solución y sería interesante hacer un test no solo de lectura sino también de análisis sobre un conjunto de datos con  el <strong>stack Hadoop</strong>, <strong>MongoDB</strong> y, si se decide por mantener <em>tranSMART</em>, con <strong>Postgresql sobre Hadoop</strong>, o sobre los dos primeros si se pueden de alguna manera obtener las herramientas de análisis necesarias para integrarlas en el <strong>stack de Hadoop</strong> o <strong>MongoDB</strong> (como comentamos en la entrevista, para no tener que empezar de cero y así cumplir un poco el DRY -Don’t Repeat Yourself-).</p>
+<p>Si esto no se pudiera hacer, el stack de Hadoop es atractivo: es ampliamente usado, con lo cual hay muchos recursos de documentación y soporte, tanto por parte de la comunidad como de cursos -gratis o no-, y mucho software alrededor de él. De hecho, Hadoop (y <strong>HDFS</strong>) sería la base sobre la que poner, por ejemplo:</p>
+<ul>
+<li><strong>HBase</strong>, base de datos ‘columnar’ como sistema de almacenamiento distribuido</li>
+<li><strong>Spark</strong>, motor para procesamiento de datos a gran escala</li>
+<li><strong>Phoenix</strong>, procesamiento operacional con baja latencia</li>
+<li><strong>Atlas</strong>, management &amp; governance</li>
+</ul>
+<p>Como contrapartida está su mantenimiento, que puede no ser sencillo en términos de administración y operación (<em>DevOps</em>).</p>
+<h5><a id="Usuarios_SQL_42"></a>Usuarios: SQL</h5>
+<p>El número limitado de usuarios no hace aconsejable utilizar un sistema distribuido de alto rendimiento y un RDBMS servirá bien. No se harán escrituras en tiempo real ni lecturas masivas de datos a menos que los resultados de los análisis produzcan gran cantidad de datos (no se supone puesto que serán el resultado de una minería de datos).</p>
+<h5><a id="Logs_45"></a>Logs</h5>
+<p>Dependiendo del volumen de los logs, la velocidad de generación y si se hacen análisis sobre ellos. Probablemente una solución SQL sería apropiada, considerando además que buena parte de la información en él será relativa a la actividad de los usuarios.</p>
+<h5><a id="Raw_files_File_system_or_NoSQL_48"></a>Raw files: File system or NoSQL</h5>
+<p>Me refiero a los ficheros con datos para preprocesar en el cluster. Dependiendo de lo que se vaya a hacer con ellos y de su tamaño, la solución parsimoniosa sería no hacer nada, es decir, guardarlos en un disco tal cual. Esto suponiendo que apenas se van a usar ni hacer operaciones sobre ellos de manera más o menos frecuente.</p>
+<p>De otra manera, sería necesario una instancia de una base de datos NoSQL (que puede ser distinta a la usada para los datos preprocesados). Aquí me puedo inclinar en que los guardaría tal y como están porque es el origen de todo lo que se hará después e idealmente deberían existir mientras las muestras que los originaron existan.</p>
+<h3><a id="Web_Application_53"></a>Web Application</h3>
+<p>El punto de entrada a los usuarios. Entiendo que sería algo como el interfaz de tranSMART,  “más moderno” si cabe.</p>
+<p>Como se ve en el diagrama, la capa analítica podría estar integrada en el web application framework o separada (si por ejemplo, se usara tranSMART de alguna manera).</p>
+<p>En cualquier caso, me inclino por una solución desacoplada, donde el cliente web haga peticiones REST al application framework y éste devuelva los resultados. De esta forma</p>
+<ul>
+<li>se puede crear un API (protegida) para acceso programático</li>
+<li>se pueden crear diferentes clientes, no sólo web</li>
+</ul>
+<p>El application framework tendrá que realizar la autenticación y autorización de operaciones a los usuarios, probablemente usando algún componente de terceros, librería u otra framework para soportar la gestión de usuarios (roles, permisos, …).</p>
+<p>Destacar, por lo comentado en el mail, que no será esta parte de la aplicación como tal la que haga los análisis, sino que será probablemente la solución de big data analytics la que lo haga y devuelva los datos de los resultados a la aplicación web, que los guardará como datos de usuario y será quien los visualice.</p>
+<h3><a id="Integracin_del_preprocesamiento_67"></a>Integración del preprocesamiento</h3>
+<p>Conceptualmente, aquí se supone que se está hablando de una carga de datos de un fichero en una base de datos, lo que se da en llamar ’<em>bulk load</em>', con el uso de un loader para convertir los datos al formato de la BD. Las dos particularidades que se comentan.</p>
+<h5><a id="Recoleccin_y_almacenamiento_de_resultados_del_cluster_70"></a>Recolección y almacenamiento de resultados del cluster</h5>
+<p>Aquí se supone, como comentamos, que los programas de preprocesamiento generan un fichero de datos preprocesados que se quedan en el cluster. Utilizando el comando <code>qsub</code> se puede enviar un correo electrónico cuando el trabajo se ha terminado. Conceptualmente, a partir de ahí se debería acceder al fichero resultado y empezar a almacenar los datos. Esto se puede hacer siempre que se pueda acceder programáticamente al fichero en el cluster para leerlo e incorporarlo a la BD. Se supone que una vez guardados lo datos, el fichero se elimina.</p>
+<h5><a id="LIMS_73"></a>LIMS</h5>
+<p>Se comenta que las unidades puede usar un LIMS para lanzar los ficheros raw al cluster. Haría falta sabe si este LIMS tiene acceso a los resultados producidos. También, qué hace este sistema con los datos brutos generados, ya que puede influir en el almacenamiento de los datos brutos comentado antes.</p>
+<h3><a id="Bonus_77"></a>Bonus</h3>
+<p>Buscando documentación, he encontrado una herramienta que os puede servir de mucho. Se llama <a href="http://zeppelin.apache.org">Zeppelin</a>, parece algo como un cuaderno de laboratorio y se integra con el stack de Hadoop. Es un futurible porque si se pincha en el enlace, todas las versiones aparecen como ’<em>incubating</em>', lo que no es muy tentador ahora mismo.</p>
+
+</body></html>
