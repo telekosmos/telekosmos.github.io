@@ -1,7 +1,7 @@
 # Propuesta
 
 ### Diagrama de sistema ###
-![cnic/Slide1.png](cnic/Slide1.png)
+![cnic/Slide1.png](https://raw.githubusercontent.com/telekosmos/telekosmos.github.io/master/cnic/cnic/Slide1.png)
 
 ### Necesidades de datos ###
 - __Usuarios__. Usuarios de la aplicación. Según lo especificado, se supone un máximo de 1000, probablmente menos según lo comentado. De cualquier manera, esa cantidad se adapta a un modelo SQL/Relacional. Implica guardar perfiles de usuario: permisos, preferencias, resultados, historia de operaciones...
